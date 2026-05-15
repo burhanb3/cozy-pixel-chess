@@ -26,6 +26,8 @@ export function GameLayout({ theme, leftRail, board, rightRail, bottomBar }: Gam
     '--theme-accent': theme.colors.accent,
     '--theme-text': theme.colors.text,
     '--asset-board-frame': `url("${theme.assets.boards.frame.path}")`,
+    '--asset-square-light': `url("${theme.assets.boards.lightSquare.path}")`,
+    '--asset-square-dark': `url("${theme.assets.boards.darkSquare.path}")`,
     '--asset-player-panel-frame': `url("${theme.assets.panels.playerFrame.path}")`,
     '--asset-move-history-panel-frame': `url("${theme.assets.panels.moveHistoryFrame.path}")`,
     '--asset-button-normal': `url("${theme.assets.buttons.baseNormal.path}")`,

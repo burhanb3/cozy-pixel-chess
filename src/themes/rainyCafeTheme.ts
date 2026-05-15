@@ -1,6 +1,8 @@
 import type { GameTheme } from './themeTypes'
 import avatarFrame from '../assets/themes/rainy-cafe/avatars/avatar-frame.png'
 import boardFrame from '../assets/themes/rainy-cafe/boards/board-frame.png'
+import squareDark from '../assets/themes/rainy-cafe/boards/square-dark.png'
+import squareLight from '../assets/themes/rainy-cafe/boards/square-light.png'
 import buttonBaseHover from '../assets/themes/rainy-cafe/buttons/button-base-hover.png'
 import buttonBaseNormal from '../assets/themes/rainy-cafe/buttons/button-base-normal.png'
 import buttonBasePressed from '../assets/themes/rainy-cafe/buttons/button-base-pressed.png'
@@ -54,14 +56,14 @@ export const rainyCafeTheme: GameTheme = {
         status: 'planned',
       },
       lightSquare: {
-        path: '/src/assets/themes/rainy-cafe/boards/square-light.png',
+        path: squareLight,
         description: 'Repeatable cream board square texture.',
-        status: 'planned',
+        status: 'ready',
       },
       darkSquare: {
-        path: '/src/assets/themes/rainy-cafe/boards/square-dark.png',
+        path: squareDark,
         description: 'Repeatable muted green board square texture.',
-        status: 'planned',
+        status: 'ready',
       },
     },
     panels: {
@@ -263,6 +265,16 @@ export const rainyCafeTheme: GameTheme = {
       ],
       notes:
         'First production batch focuses on high-impact UI frames and button states. These paths are metadata only until files exist.',
+    },
+    {
+      id: 'rainy-cafe-batch-2-board-squares',
+      displayName: 'Rainy Cafe Batch 2 Board Squares',
+      assetPaths: [
+        '/src/assets/themes/rainy-cafe/boards/square-light.png',
+        '/src/assets/themes/rainy-cafe/boards/square-dark.png',
+      ],
+      notes:
+        'Second production batch replaces flat CSS board square colors with low-contrast tile textures. Requires contrast QA for pieces and board states.',
     },
   ],
 }

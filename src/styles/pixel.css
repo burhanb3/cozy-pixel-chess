@@ -436,15 +436,15 @@
 }
 
 .chess-square.light {
-  background:
-    repeating-linear-gradient(0deg, rgba(107, 71, 40, 0.035) 0 2px, transparent 2px 10px),
-    var(--light-square, #f4d7a1);
+  background-color: var(--light-square, #f4d7a1);
+  background-image: var(--asset-square-light);
+  background-size: cover;
 }
 
 .chess-square.dark {
-  background:
-    repeating-linear-gradient(90deg, rgba(255, 238, 185, 0.045) 0 3px, transparent 3px 12px),
-    var(--dark-square, #879168);
+  background-color: var(--dark-square, #879168);
+  background-image: var(--asset-square-dark);
+  background-size: cover;
 }
 
 .chess-square.selected {
