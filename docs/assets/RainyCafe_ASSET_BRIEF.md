@@ -4,7 +4,9 @@
 
 Rainy Cafe should feel like a hand-crafted pixel-art chess room: a warm wooden table, cream parchment UI panels, muted green board squares, a rainy blue window, soft gold lamp light, and small cozy decor around the board.
 
-The reference image is `docs/references/rainy-cafe-reference.png`. The current implementation screenshot is `docs/references/visual-checks/rainy-cafe-current.png`.
+The reference image at `docs/references/rainy-cafe-reference.png` is the canonical Rainy Cafe style anchor. It is the primary source of truth for all Rainy Cafe production assets.
+
+The current implementation screenshot at `docs/references/visual-checks/rainy-cafe-current.png` is only a temporary implementation snapshot. Use it to see what still looks placeholder-like, not as the visual target.
 
 ## Why The Current UI Is Insufficient
 
@@ -68,4 +70,3 @@ Use medium-density pixel art: enough texture to feel handmade, but not noisy. La
 - Selected square highlights.
 - Current turn text.
 - Puzzle or hint text.
-

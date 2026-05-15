@@ -23,14 +23,14 @@ export const rainyCafeTheme: GameTheme = {
   assets: {
     backgrounds: {
       roomBase: {
-        path: '/src/assets/themes/rainy-cafe/backgrounds/rainy-cafe-room-base.png',
+        path: '/src/assets/themes/rainy-cafe/backgrounds/rainy-room-background.png',
         description: 'Full 1440x900 Rainy Cafe room/table base without baked UI text.',
         status: 'planned',
       },
     },
     lighting: {
       softVignette: {
-        path: '/src/assets/themes/rainy-cafe/lighting/soft-vignette-overlay.png',
+        path: '/src/assets/themes/rainy-cafe/lighting/lighting-vignette-overlay.png',
         description: 'Transparent warm lamp glow and edge vignette overlay.',
         status: 'planned',
       },
@@ -105,49 +105,49 @@ export const rainyCafeTheme: GameTheme = {
     },
     pieces: {
       whiteSet: {
-        path: '/src/assets/themes/rainy-cafe/pieces/white-pieces.png',
+        path: '/src/assets/themes/rainy-cafe/pieces/white-piece-set.png',
         description: 'White chess piece sprite sheet.',
         status: 'planned',
       },
       blackSet: {
-        path: '/src/assets/themes/rainy-cafe/pieces/black-pieces.png',
+        path: '/src/assets/themes/rainy-cafe/pieces/black-piece-set.png',
         description: 'Black chess piece sprite sheet.',
         status: 'planned',
       },
     },
     decor: {
       cup: {
-        path: '/src/assets/themes/rainy-cafe/decor/cup.png',
+        path: '/src/assets/themes/rainy-cafe/decor/cup-decor.png',
         description: 'Cozy cup decor slot.',
         status: 'planned',
       },
       lamp: {
-        path: '/src/assets/themes/rainy-cafe/decor/lamp.png',
+        path: '/src/assets/themes/rainy-cafe/decor/hanging-lamp-decor.png',
         description: 'Warm hanging lamp decor slot.',
         status: 'planned',
       },
       booksStack: {
-        path: '/src/assets/themes/rainy-cafe/decor/books-stack.png',
+        path: '/src/assets/themes/rainy-cafe/decor/books-stack-decor.png',
         description: 'Book stack decor slot.',
         status: 'planned',
       },
       plant: {
-        path: '/src/assets/themes/rainy-cafe/decor/plant.png',
+        path: '/src/assets/themes/rainy-cafe/decor/potted-plant-decor.png',
         description: 'Small plant decor slot.',
         status: 'planned',
       },
       rainyWindow: {
-        path: '/src/assets/themes/rainy-cafe/decor/rainy-window.png',
+        path: '/src/assets/themes/rainy-cafe/decor/rainy-window-decor.png',
         description: 'Rainy window decor layer.',
         status: 'planned',
       },
       catBed: {
-        path: '/src/assets/themes/rainy-cafe/decor/cat-bed.png',
+        path: '/src/assets/themes/rainy-cafe/decor/cat-bed-decor.png',
         description: 'Small cozy cat bed decor slot.',
         status: 'planned',
       },
       leafCornerDecals: {
-        path: '/src/assets/themes/rainy-cafe/decor/leaf-corner-decals.png',
+        path: '/src/assets/themes/rainy-cafe/decor/corner-leaf-flower-decals.png',
         description: 'Reusable leaf and flower corner decals.',
         status: 'planned',
       },
@@ -157,12 +157,12 @@ export const rainyCafeTheme: GameTheme = {
         status: 'planned',
       },
       speechBubblePanel: {
-        path: '/src/assets/themes/rainy-cafe/panels/speech-bubble-panel.png',
+        path: '/src/assets/themes/rainy-cafe/panels/coach-comment-panel.png',
         description: 'Future coach comment panel without baked text.',
         status: 'planned',
       },
       timerPill: {
-        path: '/src/assets/themes/rainy-cafe/panels/timer-pill.png',
+        path: '/src/assets/themes/rainy-cafe/panels/timer-pill-frame.png',
         description: 'Future timer pill without baked digits.',
         status: 'planned',
       },
@@ -174,7 +174,7 @@ export const rainyCafeTheme: GameTheme = {
     },
     particles: {
       rainStreak: {
-        path: '/src/assets/themes/rainy-cafe/particles/rain-streak.png',
+        path: '/src/assets/themes/rainy-cafe/particles/rain-streak-particle.png',
         description: 'Transparent repeatable rain streak particle.',
         status: 'planned',
       },
@@ -191,7 +191,7 @@ export const rainyCafeTheme: GameTheme = {
         status: 'planned',
       },
       cafeRoomTone: {
-        path: '/src/assets/themes/rainy-cafe/sounds/cafe-room-tone.ogg',
+        path: '/src/assets/themes/rainy-cafe/sounds/ambient-cafe-room-tone.ogg',
         description: 'Future subtle cafe room tone.',
         status: 'planned',
       },
@@ -227,6 +227,12 @@ export const rainyCafeTheme: GameTheme = {
   buttonStyle: {
     frame: 'large chunky cafe action buttons in muted green, amber, blue, and lilac',
     surface: 'stitched cloth and painted wood placeholder surfaces',
+  },
+  visualReferences: {
+    canonicalStyleAnchor: 'docs/references/rainy-cafe-reference.png',
+    currentImplementationSnapshot: 'docs/references/visual-checks/rainy-cafe-current.png',
+    finalAssetCatalog: 'docs/assets/RainyCafe_FINAL_ASSET_CATALOG.md',
+    finalPromptPack: 'docs/assets/RainyCafe_FINAL_PROMPT_PACK.md',
   },
   decorSlots: [
     { id: 'left-cup', label: 'Cup slot', placement: 'left' },

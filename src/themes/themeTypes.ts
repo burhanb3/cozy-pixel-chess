@@ -90,6 +90,13 @@ export type ThemeAssetBatch = {
   notes: string
 }
 
+export type ThemeVisualReferences = {
+  canonicalStyleAnchor: string
+  currentImplementationSnapshot: string
+  finalAssetCatalog: string
+  finalPromptPack: string
+}
+
 export type GameTheme = {
   id: string
   displayName: string
@@ -117,6 +124,7 @@ export type GameTheme = {
     frame: string
     surface: string
   }
+  visualReferences?: ThemeVisualReferences
   decorSlots: ThemeDecorSlot[]
   productionBatches?: ThemeAssetBatch[]
 }

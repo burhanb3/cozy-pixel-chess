@@ -4,6 +4,8 @@
 
 Replace CSS placeholders one asset group at a time. Keep the chess board playable after every step. Dynamic text stays in React. `chess.js` remains the source of truth for chess rules.
 
+The canonical Rainy Cafe visual anchor is `docs/references/rainy-cafe-reference.png`. Every production asset should be compared against that image. `docs/references/visual-checks/rainy-cafe-current.png` is only a temporary implementation screenshot.
+
 ## Recommended Integration Order
 
 1. Import first batch UI frames: board frame, player panel frame, move history panel frame, button states, avatar frame.
