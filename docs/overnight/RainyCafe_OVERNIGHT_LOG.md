@@ -28,6 +28,12 @@ Branch: `goal/overnight-rainy-cafe-pass`
 
 - Existing Batch 1 assets were not regenerated because they already exist and are wired into the theme.
 - Chess pieces, multiplayer, shop/customization, puzzle mode, and audio were kept out of scope.
+- `lighting-vignette-overlay.png` was postponed. A soft transparent lighting overlay is risky with the current built-in chroma-key workflow and could reduce board/text readability.
+- Separate decor assets were postponed. The new room background already includes strong Rainy Cafe environment details; adding separate decor immediately could duplicate the scene and make the UI too busy.
+
+## Stop Reason
+
+Stopped after the action bar and room background integrations because this is a clean, reviewable visual checkpoint. The app builds, the board remains playable, and the final screenshot is meaningfully closer to the approved reference without a large layout rewrite.
 
 ## Screenshots
 
