@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+@import './styles/pixel.css';
+
+:root {
+  font-family: Nunito, Inter, system-ui, sans-serif;
+  color: #f7e5c2;
+  background: #111924;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+button {
+  font: inherit;
+}
