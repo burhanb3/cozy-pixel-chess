@@ -15,6 +15,16 @@ export function GameLayout({ theme, leftRail, board, rightRail, bottomBar }: Gam
     '--theme-bg': theme.colors.canvasBackground,
     '--panel-bg': theme.colors.panelBackground,
     '--panel-border': theme.colors.panelBorder,
+    '--panel-shadow': theme.colors.panelShadow,
+    '--wood-dark': theme.colors.woodDark,
+    '--wood-mid': theme.colors.woodMid,
+    '--parchment': theme.colors.parchment,
+    '--muted-green': theme.colors.mutedGreen,
+    '--rainy-blue': theme.colors.rainyBlue,
+    '--light-square': theme.colors.lightSquare,
+    '--dark-square': theme.colors.darkSquare,
+    '--theme-accent': theme.colors.accent,
+    '--theme-text': theme.colors.text,
   } as CSSProperties
 
   return (

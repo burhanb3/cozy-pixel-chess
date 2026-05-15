@@ -12,10 +12,11 @@ type PlayerCardProps = {
 
 export function PlayerCard({ name, side, avatar, isActive, statusText }: PlayerCardProps) {
   return (
-    <PixelPanel className={isActive ? 'ring-4 ring-[#f2bd57]/60' : ''}>
+    <PixelPanel className={`player-card-panel ${isActive ? 'is-active' : ''}`}>
       <div className="flex items-center gap-3">
+        {/* TODO(asset): replace this block with theme.assets.avatarFrame and theme avatar portraits. */}
         <div
-          className="grid h-14 w-14 place-items-center rounded-lg border-4 border-[#56362a] text-sm font-black text-[#352119]"
+          className="avatar-frame grid h-16 w-16 place-items-center text-sm font-black text-[#302018]"
           style={{ backgroundColor: avatar.color }}
           aria-label={`${avatar.label} avatar placeholder`}
         >
@@ -24,7 +25,7 @@ export function PlayerCard({ name, side, avatar, isActive, statusText }: PlayerC
         <div className="min-w-0 text-left">
           <p className="truncate text-base font-black">{name}</p>
           <p className="text-xs font-bold uppercase">{side === 'w' ? 'White' : 'Black'}</p>
-          <p className="mt-1 text-xs font-semibold">{statusText}</p>
+          <p className="mt-1 rounded bg-[#f7e5bd]/55 px-2 py-1 text-xs font-semibold">{statusText}</p>
         </div>
       </div>
     </PixelPanel>

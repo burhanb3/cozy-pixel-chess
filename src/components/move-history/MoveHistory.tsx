@@ -14,7 +14,7 @@ export function MoveHistory({ moves }: MoveHistoryProps) {
   }))
 
   return (
-    <PixelPanel title="Move History" className="max-h-full overflow-hidden">
+    <PixelPanel title="Move History" className="move-history-panel max-h-full overflow-hidden">
       <div className="mb-2 grid grid-cols-[2rem_1fr_1fr] gap-2 rounded bg-[#3d251d]/20 px-2 py-1 text-xs font-black uppercase tracking-wide text-[#4b2a20]">
         <span>#</span>
         <span>White</span>
@@ -30,7 +30,7 @@ export function MoveHistory({ moves }: MoveHistoryProps) {
 
               return (
               <li
-                className={`grid grid-cols-[2rem_1fr_1fr] gap-2 rounded px-2 py-1 ${isLastRow ? 'bg-[#f2bd57]/45 ring-2 ring-[#6d3c25]/35' : 'bg-[#fff1cd]/40'}`}
+                className={`move-row grid grid-cols-[2rem_1fr_1fr] gap-2 rounded px-2 py-1 ${isLastRow ? 'is-latest' : ''}`}
                 key={row.moveNumber}
               >
                 <span className="text-[#6d4a34]">{row.moveNumber}.</span>

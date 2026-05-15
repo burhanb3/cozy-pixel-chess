@@ -4,6 +4,8 @@ This project uses approach C: production UI is modular and asset-based.
 
 Full-screen Imagen mockups are art direction only. They can guide mood, composition, lighting, and object vocabulary, but the final game UI should not be one baked background image with all controls inside it.
 
+The current Rainy Cafe visual reference lives at `docs/references/rainy-cafe-reference.png`. Use it to guide composition, palette, panel feel, decor vocabulary, and atmosphere. Do not paste it into the app as a flat background.
+
 Each theme should provide replaceable asset slots:
 
 - Backgrounds.

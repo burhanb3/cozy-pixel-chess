@@ -1,13 +1,17 @@
 export type ThemeAssetSlots = {
   background: string
+  vignetteLighting: string
+  rainParticles: string
   boardFrame: string
+  boardSurface: string
   lightSquare: string
   darkSquare: string
-  panel: string
-  button: string
+  playerPanel: string
+  moveHistoryPanel: string
+  actionButtonBase: string
+  avatarFrame: string
   avatars: string
   decor: string
-  particles: string
   ambientSound: string
 }
 
@@ -16,6 +20,12 @@ export type ThemeColors = {
   canvasBackground: string
   panelBackground: string
   panelBorder: string
+  panelShadow: string
+  woodDark: string
+  woodMid: string
+  parchment: string
+  mutedGreen: string
+  rainyBlue: string
   lightSquare: string
   darkSquare: string
   accent: string

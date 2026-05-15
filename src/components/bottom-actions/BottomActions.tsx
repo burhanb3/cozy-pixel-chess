@@ -22,7 +22,7 @@ export function BottomActions({ status, currentTurnLabel, canUndo, onReset, onUn
   const statusLabel = statusLabels[status]
 
   return (
-    <PixelPanel className="flex flex-wrap items-center justify-between gap-3">
+    <PixelPanel className="action-bar-panel flex flex-wrap items-center justify-between gap-3">
       <div className="flex flex-wrap items-center gap-3 text-left">
         <div>
           <p className="text-xs font-black uppercase tracking-wide">{statusLabel.title}</p>
@@ -30,15 +30,15 @@ export function BottomActions({ status, currentTurnLabel, canUndo, onReset, onUn
         </div>
         <p className="turn-pill text-sm font-black">{currentTurnLabel}</p>
       </div>
-      <div className="flex flex-wrap gap-2">
-        <PixelButton onClick={onReset}>New Game</PixelButton>
-        <PixelButton disabled={!canUndo} onClick={onUndo}>
+      <div className="action-buttons flex flex-wrap gap-2">
+        <PixelButton className="button-green" onClick={onReset}>New Game</PixelButton>
+        <PixelButton className="button-brown" disabled={!canUndo} onClick={onUndo}>
           Undo
         </PixelButton>
-        <PixelButton disabled title="Hints are planned for a later MVP step">
+        <PixelButton className="button-gold" disabled title="Hints are planned for a later MVP step">
           Hint Soon
         </PixelButton>
-        <PixelButton disabled title="Puzzle mode is planned but intentionally not implemented yet">
+        <PixelButton className="button-blue" disabled title="Puzzle mode is planned but intentionally not implemented yet">
           Puzzle Soon
         </PixelButton>
       </div>

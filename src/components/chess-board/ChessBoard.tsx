@@ -38,6 +38,7 @@ export function ChessBoard({
   const legalTargets = new Map(legalMoves.map((move) => [move.to, move]))
 
   return (
+    // TODO(asset): replace frame/surface CSS with theme.assets.boardFrame and theme.assets.boardSurface.
     <div className="chess-board-frame pixelated" aria-label="Playable local chess board">
       <div className="chess-board">
         {squares.map(({ square, piece }, index) => {
