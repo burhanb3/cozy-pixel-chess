@@ -16,7 +16,7 @@ Branch: `goal/overnight-rainy-cafe-pass`
 
 ## Generated
 
-- None yet.
+- `src/assets/themes/rainy-cafe/panels/bottom-action-bar-frame.png`
 
 ## Integrated
 
@@ -33,5 +33,4 @@ Branch: `goal/overnight-rainy-cafe-pass`
 
 ## Next Recommended Step
 
-Generate `src/assets/themes/rainy-cafe/panels/bottom-action-bar-frame.png`, integrate it into the bottom action area, run checks, then capture `docs/references/visual-checks/overnight-step-01.png`.
-
+Integrate `src/assets/themes/rainy-cafe/panels/bottom-action-bar-frame.png` into the bottom action area, run checks, then capture `docs/references/visual-checks/overnight-step-01.png`.
