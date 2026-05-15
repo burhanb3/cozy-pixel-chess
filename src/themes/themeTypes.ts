@@ -1,18 +1,63 @@
+export type ThemeAssetRef = {
+  path: string
+  description: string
+  status: 'planned' | 'placeholder' | 'ready'
+}
+
 export type ThemeAssetSlots = {
-  background: string
-  vignetteLighting: string
-  rainParticles: string
-  boardFrame: string
-  boardSurface: string
-  lightSquare: string
-  darkSquare: string
-  playerPanel: string
-  moveHistoryPanel: string
-  actionButtonBase: string
-  avatarFrame: string
-  avatars: string
-  decor: string
-  ambientSound: string
+  backgrounds: {
+    roomBase: ThemeAssetRef
+  }
+  lighting: {
+    softVignette: ThemeAssetRef
+  }
+  boards: {
+    frame: ThemeAssetRef
+    surface: ThemeAssetRef
+    lightSquare: ThemeAssetRef
+    darkSquare: ThemeAssetRef
+  }
+  panels: {
+    playerFrame: ThemeAssetRef
+    moveHistoryFrame: ThemeAssetRef
+    actionBarFrame: ThemeAssetRef
+  }
+  buttons: {
+    baseNormal: ThemeAssetRef
+    baseHover: ThemeAssetRef
+    basePressed: ThemeAssetRef
+  }
+  avatars: {
+    frame: ThemeAssetRef
+    placeholderSet: ThemeAssetRef
+  }
+  pieces: {
+    whiteSet: ThemeAssetRef
+    blackSet: ThemeAssetRef
+  }
+  decor: {
+    cup: ThemeAssetRef
+    lamp: ThemeAssetRef
+    booksStack: ThemeAssetRef
+    plant: ThemeAssetRef
+    rainyWindow: ThemeAssetRef
+    catBed: ThemeAssetRef
+    leafCornerDecals: ThemeAssetRef
+    capturedPiecesTray: ThemeAssetRef
+    speechBubblePanel: ThemeAssetRef
+    timerPill: ThemeAssetRef
+    moveRowHighlight: ThemeAssetRef
+  }
+  particles: {
+    rainStreak: ThemeAssetRef
+    hoverSparkle: ThemeAssetRef
+  }
+  sounds: {
+    ambientRainLoop: ThemeAssetRef
+    cafeRoomTone: ThemeAssetRef
+    move: ThemeAssetRef
+    capture: ThemeAssetRef
+  }
 }
 
 export type ThemeColors = {

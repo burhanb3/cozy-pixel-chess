@@ -21,20 +21,191 @@ export const rainyCafeTheme: GameTheme = {
     text: '#302018',
   },
   assets: {
-    background: '/src/assets/themes/rainy-cafe/backgrounds/room-placeholder.webp',
-    vignetteLighting: '/src/assets/themes/rainy-cafe/backgrounds/vignette-lighting-placeholder.webp',
-    rainParticles: '/src/assets/themes/rainy-cafe/particles/window-rain-placeholder.webp',
-    boardFrame: '/src/assets/themes/rainy-cafe/boards/board-frame-placeholder.webp',
-    boardSurface: '/src/assets/themes/rainy-cafe/boards/board-surface-placeholder.webp',
-    lightSquare: '/src/assets/themes/rainy-cafe/boards/light-square-placeholder.webp',
-    darkSquare: '/src/assets/themes/rainy-cafe/boards/dark-square-placeholder.webp',
-    playerPanel: '/src/assets/themes/rainy-cafe/panels/player-panel-placeholder.webp',
-    moveHistoryPanel: '/src/assets/themes/rainy-cafe/panels/move-history-panel-placeholder.webp',
-    actionButtonBase: '/src/assets/themes/rainy-cafe/buttons/action-button-placeholder.webp',
-    avatarFrame: '/src/assets/themes/rainy-cafe/avatars/avatar-frame-placeholder.webp',
-    avatars: '/src/assets/themes/rainy-cafe/avatars/avatar-placeholder.webp',
-    decor: '/src/assets/themes/rainy-cafe/decor/decor-placeholder.webp',
-    ambientSound: '/src/assets/themes/rainy-cafe/sounds/rain-ambient-placeholder.mp3',
+    backgrounds: {
+      roomBase: {
+        path: '/src/assets/themes/rainy-cafe/backgrounds/rainy-cafe-room-base.png',
+        description: 'Full 1440x900 Rainy Cafe room/table base without baked UI text.',
+        status: 'planned',
+      },
+    },
+    lighting: {
+      softVignette: {
+        path: '/src/assets/themes/rainy-cafe/lighting/soft-vignette-overlay.png',
+        description: 'Transparent warm lamp glow and edge vignette overlay.',
+        status: 'planned',
+      },
+    },
+    boards: {
+      frame: {
+        path: '/src/assets/themes/rainy-cafe/boards/board-frame.png',
+        description: 'Transparent carved wood board frame with center cutout.',
+        status: 'planned',
+      },
+      surface: {
+        path: '/src/assets/themes/rainy-cafe/boards/board-surface.png',
+        description: 'Optional board underlay surface behind live squares.',
+        status: 'planned',
+      },
+      lightSquare: {
+        path: '/src/assets/themes/rainy-cafe/boards/square-light.png',
+        description: 'Repeatable cream board square texture.',
+        status: 'planned',
+      },
+      darkSquare: {
+        path: '/src/assets/themes/rainy-cafe/boards/square-dark.png',
+        description: 'Repeatable muted green board square texture.',
+        status: 'planned',
+      },
+    },
+    panels: {
+      playerFrame: {
+        path: '/src/assets/themes/rainy-cafe/panels/player-panel-frame.png',
+        description: 'Empty player card frame for live avatar and text.',
+        status: 'planned',
+      },
+      moveHistoryFrame: {
+        path: '/src/assets/themes/rainy-cafe/panels/move-history-panel-frame.png',
+        description: 'Empty move history frame for live move notation.',
+        status: 'planned',
+      },
+      actionBarFrame: {
+        path: '/src/assets/themes/rainy-cafe/panels/bottom-action-bar-frame.png',
+        description: 'Bottom bar frame for live status and controls.',
+        status: 'planned',
+      },
+    },
+    buttons: {
+      baseNormal: {
+        path: '/src/assets/themes/rainy-cafe/buttons/button-base-normal.png',
+        description: 'Normal state action button base without text.',
+        status: 'planned',
+      },
+      baseHover: {
+        path: '/src/assets/themes/rainy-cafe/buttons/button-base-hover.png',
+        description: 'Hover state action button base without text.',
+        status: 'planned',
+      },
+      basePressed: {
+        path: '/src/assets/themes/rainy-cafe/buttons/button-base-pressed.png',
+        description: 'Pressed state action button base without text.',
+        status: 'planned',
+      },
+    },
+    avatars: {
+      frame: {
+        path: '/src/assets/themes/rainy-cafe/avatars/avatar-frame.png',
+        description: 'Reusable avatar frame with transparent portrait opening.',
+        status: 'planned',
+      },
+      placeholderSet: {
+        path: '/src/assets/themes/rainy-cafe/avatars/avatar-placeholder-set.png',
+        description: 'Temporary Rainy Cafe avatar portrait set.',
+        status: 'planned',
+      },
+    },
+    pieces: {
+      whiteSet: {
+        path: '/src/assets/themes/rainy-cafe/pieces/white-pieces.png',
+        description: 'White chess piece sprite sheet.',
+        status: 'planned',
+      },
+      blackSet: {
+        path: '/src/assets/themes/rainy-cafe/pieces/black-pieces.png',
+        description: 'Black chess piece sprite sheet.',
+        status: 'planned',
+      },
+    },
+    decor: {
+      cup: {
+        path: '/src/assets/themes/rainy-cafe/decor/cup.png',
+        description: 'Cozy cup decor slot.',
+        status: 'planned',
+      },
+      lamp: {
+        path: '/src/assets/themes/rainy-cafe/decor/lamp.png',
+        description: 'Warm hanging lamp decor slot.',
+        status: 'planned',
+      },
+      booksStack: {
+        path: '/src/assets/themes/rainy-cafe/decor/books-stack.png',
+        description: 'Book stack decor slot.',
+        status: 'planned',
+      },
+      plant: {
+        path: '/src/assets/themes/rainy-cafe/decor/plant.png',
+        description: 'Small plant decor slot.',
+        status: 'planned',
+      },
+      rainyWindow: {
+        path: '/src/assets/themes/rainy-cafe/decor/rainy-window.png',
+        description: 'Rainy window decor layer.',
+        status: 'planned',
+      },
+      catBed: {
+        path: '/src/assets/themes/rainy-cafe/decor/cat-bed.png',
+        description: 'Small cozy cat bed decor slot.',
+        status: 'planned',
+      },
+      leafCornerDecals: {
+        path: '/src/assets/themes/rainy-cafe/decor/leaf-corner-decals.png',
+        description: 'Reusable leaf and flower corner decals.',
+        status: 'planned',
+      },
+      capturedPiecesTray: {
+        path: '/src/assets/themes/rainy-cafe/panels/captured-pieces-tray.png',
+        description: 'Future captured pieces tray frame.',
+        status: 'planned',
+      },
+      speechBubblePanel: {
+        path: '/src/assets/themes/rainy-cafe/panels/speech-bubble-panel.png',
+        description: 'Future coach comment panel without baked text.',
+        status: 'planned',
+      },
+      timerPill: {
+        path: '/src/assets/themes/rainy-cafe/panels/timer-pill.png',
+        description: 'Future timer pill without baked digits.',
+        status: 'planned',
+      },
+      moveRowHighlight: {
+        path: '/src/assets/themes/rainy-cafe/panels/move-row-highlight.png',
+        description: 'Future move history row highlight texture.',
+        status: 'planned',
+      },
+    },
+    particles: {
+      rainStreak: {
+        path: '/src/assets/themes/rainy-cafe/particles/rain-streak.png',
+        description: 'Transparent repeatable rain streak particle.',
+        status: 'planned',
+      },
+      hoverSparkle: {
+        path: '/src/assets/themes/rainy-cafe/particles/hover-sparkle.png',
+        description: 'Future hover sparkle particle sheet.',
+        status: 'planned',
+      },
+    },
+    sounds: {
+      ambientRainLoop: {
+        path: '/src/assets/themes/rainy-cafe/sounds/ambient-rain-loop.ogg',
+        description: 'Future loopable rain ambience.',
+        status: 'planned',
+      },
+      cafeRoomTone: {
+        path: '/src/assets/themes/rainy-cafe/sounds/cafe-room-tone.ogg',
+        description: 'Future subtle cafe room tone.',
+        status: 'planned',
+      },
+      move: {
+        path: '/src/assets/themes/rainy-cafe/sounds/move.ogg',
+        description: 'Future soft wooden move sound.',
+        status: 'planned',
+      },
+      capture: {
+        path: '/src/assets/themes/rainy-cafe/sounds/capture.ogg',
+        description: 'Future soft capture sound.',
+        status: 'planned',
+      },
+    },
   },
   sounds: {
     ambient: 'rain-on-window',

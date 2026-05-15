@@ -14,6 +14,7 @@ export function MoveHistory({ moves }: MoveHistoryProps) {
   }))
 
   return (
+    // TODO(asset): replace panel CSS with theme.assets.panels.moveHistoryFrame and row highlight texture.
     <PixelPanel title="Move History" className="move-history-panel max-h-full overflow-hidden">
       <div className="mb-2 grid grid-cols-[2rem_1fr_1fr] gap-2 rounded bg-[#3d251d]/20 px-2 py-1 text-xs font-black uppercase tracking-wide text-[#4b2a20]">
         <span>#</span>
