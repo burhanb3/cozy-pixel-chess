@@ -259,7 +259,8 @@
 }
 
 .player-card-panel.pixel-panel,
-.move-history-panel.pixel-panel {
+.move-history-panel.pixel-panel,
+.action-bar-panel.pixel-panel {
   border: 0;
   border-radius: 0;
   background-repeat: no-repeat;
@@ -284,7 +285,9 @@
 .player-card-panel.pixel-panel::before,
 .player-card-panel.pixel-panel::after,
 .move-history-panel.pixel-panel::before,
-.move-history-panel.pixel-panel::after {
+.move-history-panel.pixel-panel::after,
+.action-bar-panel.pixel-panel::before,
+.action-bar-panel.pixel-panel::after {
   display: none;
 }
 
@@ -393,7 +396,10 @@
 }
 
 .action-bar-panel {
-  padding: 16px 18px;
+  min-height: 112px;
+  padding: 20px 58px 18px 62px;
+  background-color: transparent;
+  background-image: var(--asset-action-bar-frame);
 }
 
 .action-buttons {

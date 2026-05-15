@@ -20,7 +20,7 @@ Branch: `goal/overnight-rainy-cafe-pass`
 
 ## Integrated
 
-- None yet.
+- `src/assets/themes/rainy-cafe/panels/bottom-action-bar-frame.png`
 
 ## Skipped
 
@@ -30,6 +30,8 @@ Branch: `goal/overnight-rainy-cafe-pass`
 ## Screenshots
 
 - Existing baseline: `docs/references/visual-checks/rainy-cafe-batch2.png`
+- Action bar integration: `docs/references/visual-checks/overnight-step-01.png`
+- Current final screenshot: `docs/references/visual-checks/rainy-cafe-overnight-final.png`
 
 ## Next Recommended Step
 

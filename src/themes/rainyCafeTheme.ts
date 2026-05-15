@@ -6,6 +6,7 @@ import squareLight from '../assets/themes/rainy-cafe/boards/square-light.png'
 import buttonBaseHover from '../assets/themes/rainy-cafe/buttons/button-base-hover.png'
 import buttonBaseNormal from '../assets/themes/rainy-cafe/buttons/button-base-normal.png'
 import buttonBasePressed from '../assets/themes/rainy-cafe/buttons/button-base-pressed.png'
+import bottomActionBarFrame from '../assets/themes/rainy-cafe/panels/bottom-action-bar-frame.png'
 import moveHistoryPanelFrame from '../assets/themes/rainy-cafe/panels/move-history-panel-frame.png'
 import playerPanelFrame from '../assets/themes/rainy-cafe/panels/player-panel-frame.png'
 
@@ -78,9 +79,9 @@ export const rainyCafeTheme: GameTheme = {
         status: 'ready',
       },
       actionBarFrame: {
-        path: '/src/assets/themes/rainy-cafe/panels/bottom-action-bar-frame.png',
+        path: bottomActionBarFrame,
         description: 'Bottom bar frame for live status and controls.',
-        status: 'planned',
+        status: 'ready',
       },
     },
     buttons: {

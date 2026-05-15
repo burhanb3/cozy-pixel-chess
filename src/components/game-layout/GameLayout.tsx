@@ -30,6 +30,7 @@ export function GameLayout({ theme, leftRail, board, rightRail, bottomBar }: Gam
     '--asset-square-dark': `url("${theme.assets.boards.darkSquare.path}")`,
     '--asset-player-panel-frame': `url("${theme.assets.panels.playerFrame.path}")`,
     '--asset-move-history-panel-frame': `url("${theme.assets.panels.moveHistoryFrame.path}")`,
+    '--asset-action-bar-frame': `url("${theme.assets.panels.actionBarFrame.path}")`,
     '--asset-button-normal': `url("${theme.assets.buttons.baseNormal.path}")`,
     '--asset-button-hover': `url("${theme.assets.buttons.baseHover.path}")`,
     '--asset-button-pressed': `url("${theme.assets.buttons.basePressed.path}")`,
