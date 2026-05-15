@@ -38,7 +38,7 @@ export function ChessBoard({
   const legalTargets = new Map(legalMoves.map((move) => [move.to, move]))
 
   return (
-    // TODO(asset): replace frame/surface CSS and unicode glyphs with theme.assets.boards and theme.assets.pieces.
+    // TODO(asset): replace unicode glyphs with theme.assets.pieces once the piece sprite sheets are ready.
     <div className="chess-board-frame pixelated" aria-label="Playable local chess board">
       <div className="chess-board">
         {squares.map(({ square, piece }, index) => {

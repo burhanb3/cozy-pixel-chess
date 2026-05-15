@@ -1,4 +1,11 @@
 import type { GameTheme } from './themeTypes'
+import avatarFrame from '../assets/themes/rainy-cafe/avatars/avatar-frame.png'
+import boardFrame from '../assets/themes/rainy-cafe/boards/board-frame.png'
+import buttonBaseHover from '../assets/themes/rainy-cafe/buttons/button-base-hover.png'
+import buttonBaseNormal from '../assets/themes/rainy-cafe/buttons/button-base-normal.png'
+import buttonBasePressed from '../assets/themes/rainy-cafe/buttons/button-base-pressed.png'
+import moveHistoryPanelFrame from '../assets/themes/rainy-cafe/panels/move-history-panel-frame.png'
+import playerPanelFrame from '../assets/themes/rainy-cafe/panels/player-panel-frame.png'
 
 export const rainyCafeTheme: GameTheme = {
   id: 'rainy-cafe',
@@ -37,9 +44,9 @@ export const rainyCafeTheme: GameTheme = {
     },
     boards: {
       frame: {
-        path: '/src/assets/themes/rainy-cafe/boards/board-frame.png',
+        path: boardFrame,
         description: 'Transparent carved wood board frame with center cutout.',
-        status: 'planned',
+        status: 'ready',
       },
       surface: {
         path: '/src/assets/themes/rainy-cafe/boards/board-surface.png',
@@ -59,14 +66,14 @@ export const rainyCafeTheme: GameTheme = {
     },
     panels: {
       playerFrame: {
-        path: '/src/assets/themes/rainy-cafe/panels/player-panel-frame.png',
+        path: playerPanelFrame,
         description: 'Empty player card frame for live avatar and text.',
-        status: 'planned',
+        status: 'ready',
       },
       moveHistoryFrame: {
-        path: '/src/assets/themes/rainy-cafe/panels/move-history-panel-frame.png',
+        path: moveHistoryPanelFrame,
         description: 'Empty move history frame for live move notation.',
-        status: 'planned',
+        status: 'ready',
       },
       actionBarFrame: {
         path: '/src/assets/themes/rainy-cafe/panels/bottom-action-bar-frame.png',
@@ -76,26 +83,26 @@ export const rainyCafeTheme: GameTheme = {
     },
     buttons: {
       baseNormal: {
-        path: '/src/assets/themes/rainy-cafe/buttons/button-base-normal.png',
+        path: buttonBaseNormal,
         description: 'Normal state action button base without text.',
-        status: 'planned',
+        status: 'ready',
       },
       baseHover: {
-        path: '/src/assets/themes/rainy-cafe/buttons/button-base-hover.png',
+        path: buttonBaseHover,
         description: 'Hover state action button base without text.',
-        status: 'planned',
+        status: 'ready',
       },
       basePressed: {
-        path: '/src/assets/themes/rainy-cafe/buttons/button-base-pressed.png',
+        path: buttonBasePressed,
         description: 'Pressed state action button base without text.',
-        status: 'planned',
+        status: 'ready',
       },
     },
     avatars: {
       frame: {
-        path: '/src/assets/themes/rainy-cafe/avatars/avatar-frame.png',
+        path: avatarFrame,
         description: 'Reusable avatar frame with transparent portrait opening.',
-        status: 'planned',
+        status: 'ready',
       },
       placeholderSet: {
         path: '/src/assets/themes/rainy-cafe/avatars/avatar-placeholder-set.png',

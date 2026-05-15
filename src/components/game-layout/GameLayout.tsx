@@ -25,6 +25,13 @@ export function GameLayout({ theme, leftRail, board, rightRail, bottomBar }: Gam
     '--dark-square': theme.colors.darkSquare,
     '--theme-accent': theme.colors.accent,
     '--theme-text': theme.colors.text,
+    '--asset-board-frame': `url("${theme.assets.boards.frame.path}")`,
+    '--asset-player-panel-frame': `url("${theme.assets.panels.playerFrame.path}")`,
+    '--asset-move-history-panel-frame': `url("${theme.assets.panels.moveHistoryFrame.path}")`,
+    '--asset-button-normal': `url("${theme.assets.buttons.baseNormal.path}")`,
+    '--asset-button-hover': `url("${theme.assets.buttons.baseHover.path}")`,
+    '--asset-button-pressed': `url("${theme.assets.buttons.basePressed.path}")`,
+    '--asset-avatar-frame': `url("${theme.assets.avatars.frame.path}")`,
   } as CSSProperties
 
   return (
