@@ -83,6 +83,13 @@ export type ThemeDecorSlot = {
   placement: 'left' | 'right' | 'bottom' | 'background'
 }
 
+export type ThemeAssetBatch = {
+  id: string
+  displayName: string
+  assetPaths: string[]
+  notes: string
+}
+
 export type GameTheme = {
   id: string
   displayName: string
@@ -111,4 +118,5 @@ export type GameTheme = {
     surface: string
   }
   decorSlots: ThemeDecorSlot[]
+  productionBatches?: ThemeAssetBatch[]
 }

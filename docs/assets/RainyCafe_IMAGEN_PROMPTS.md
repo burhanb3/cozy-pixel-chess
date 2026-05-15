@@ -36,6 +36,108 @@ Use lowercase kebab-case names. Match the manifest path exactly. Examples:
 - `button-base-normal.png`
 - `rain-streak.png`
 
+## First Asset Batch Prompts
+
+Use these prompts first. Generate the assets in this order so the visual language settles before later textures and decor.
+
+### board-frame.png
+
+Prompt: Create a transparent pixel-art wooden chess board frame for a cozy Rainy Cafe chess game UI, 680x680, dark carved espresso wood, warm brown highlights, small mossy leaf corner accents, handmade pixel texture, square outer frame, transparent center cutout for a live 8x8 chess board, warm cafe table mood, consistent with the Rainy Cafe reference.
+
+Avoid: text, chess coordinates, labels, pieces, board squares, flat vector style, photorealism, blurry edges, watermark.
+
+Transparency: transparent PNG/WebP with alpha; center must be transparent.
+
+No baked text: do not include letters, numbers, UI labels, or move notation.
+
+Style consistency: match dark wood, parchment cream, muted green, rainy blue, soft gold palette.
+
+File name: `board-frame.png`.
+
+### player-panel-frame.png
+
+Prompt: Create a transparent pixel-art player panel frame for a cozy Rainy Cafe chess UI, 330x132, dark wood trim, cream parchment center, small leaf accents, empty avatar area on the left, empty text area on the right, handmade pixel texture, warm cafe lighting, game UI frame.
+
+Avoid: player names, ratings, timers, text, icons, portraits, photorealism, dashboard card style.
+
+Transparency: transparent PNG/WebP with alpha around the frame.
+
+No baked text: leave all text areas blank for React text.
+
+Style consistency: match the same wood, parchment, leaf, and soft gold language as `board-frame.png`.
+
+File name: `player-panel-frame.png`.
+
+### move-history-panel-frame.png
+
+Prompt: Create a transparent pixel-art move history panel frame for a cozy Rainy Cafe chess UI, 330x420, dark wood trim, cream parchment writing area, subtle paper grain, small leaf accents, empty inner area for live move notation, warm handmade game UI.
+
+Avoid: move text, numbers, table rows with baked notation, labels, coordinates, photorealism, generic web dashboard style.
+
+Transparency: transparent PNG/WebP with alpha around the frame.
+
+No baked text: no title, no row labels, no moves; React renders all text.
+
+Style consistency: match Rainy Cafe parchment and wood frames from batch 1.
+
+File name: `move-history-panel-frame.png`.
+
+### button-base-normal.png
+
+Prompt: Create a transparent pixel-art chunky action button base for a cozy Rainy Cafe chess UI, 148x72, dark wood rim, muted green painted surface, soft cream highlight, warm pixel texture, normal state, tactile game button, no icon.
+
+Avoid: text, icon, label, glossy mobile casino style, flat vector style, photorealism.
+
+Transparency: transparent PNG/WebP with alpha outside the button.
+
+No baked text: button label must be blank for React text.
+
+Style consistency: same wood rim and cozy palette as the panels.
+
+File name: `button-base-normal.png`.
+
+### button-base-hover.png
+
+Prompt: Create a transparent pixel-art chunky action button base hover state for a cozy Rainy Cafe chess UI, 148x72, same shape as normal, dark wood rim, muted green painted surface, slightly brighter top edge, subtle warm glow, tactile game button, no icon.
+
+Avoid: text, icon, label, changed button dimensions, photorealism, flat vector style.
+
+Transparency: transparent PNG/WebP with alpha outside the button.
+
+No baked text: button label must be blank for React text.
+
+Style consistency: identical geometry to `button-base-normal.png`, just brighter hover feedback.
+
+File name: `button-base-hover.png`.
+
+### button-base-pressed.png
+
+Prompt: Create a transparent pixel-art chunky action button base pressed state for a cozy Rainy Cafe chess UI, 148x72, same shape as normal, dark wood rim, muted green painted surface, lower pressed position, compressed shadow, slightly darker bottom edge, no icon.
+
+Avoid: text, icon, label, changed button dimensions, photorealism, flat vector style.
+
+Transparency: transparent PNG/WebP with alpha outside the button.
+
+No baked text: button label must be blank for React text.
+
+Style consistency: identical geometry to `button-base-normal.png`, with pressed-state depth.
+
+File name: `button-base-pressed.png`.
+
+### avatar-frame.png
+
+Prompt: Create a transparent pixel-art avatar frame for a cozy Rainy Cafe chess UI, 92x92, dark wood outer rim, cream parchment inner trim, small mossy leaf corner accent, square portrait opening, warm handmade pixel texture, no character portrait.
+
+Avoid: text, initials, portrait, icon, numbers, photorealism, flat vector style.
+
+Transparency: transparent PNG/WebP with alpha outside frame and transparent portrait opening if possible.
+
+No baked text: no initials, names, labels, or numbers.
+
+Style consistency: match batch 1 wood and parchment UI frame style.
+
+File name: `avatar-frame.png`.
+
 ## P0 Asset Prompts
 
 ### rainy-cafe-room-base
@@ -143,4 +245,3 @@ Transparent pixel-art timer pill frame, cream center and dark wood trim, 132x48,
 ### move-row-highlight
 
 Transparent or repeatable pixel-art move row highlight strip, muted green and soft gold, 280x32, no text.
-

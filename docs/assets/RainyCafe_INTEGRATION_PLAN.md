@@ -6,16 +6,38 @@ Replace CSS placeholders one asset group at a time. Keep the chess board playabl
 
 ## Recommended Integration Order
 
-1. Import board square textures.
-2. Import board frame.
-3. Import player panel and avatar frame.
-4. Import move history panel.
-5. Import bottom action bar and button states.
-6. Import rain particle and lighting overlay.
-7. Import room base background.
-8. Import decor pieces.
-9. Import chess piece sprites.
-10. Add ambient sounds later through a dedicated audio pass.
+1. Import first batch UI frames: board frame, player panel frame, move history panel frame, button states, avatar frame.
+2. Import board square textures.
+3. Import bottom action bar frame.
+4. Import rain particle and lighting overlay.
+5. Import room base background.
+6. Import decor pieces.
+7. Import chess piece sprites.
+8. Add ambient sounds later through a dedicated audio pass.
+
+## Phase 3B First Asset Batch
+
+Batch 1 is intentionally small:
+
+- `boards/board-frame.png`
+- `panels/player-panel-frame.png`
+- `panels/move-history-panel-frame.png`
+- `buttons/button-base-normal.png`
+- `buttons/button-base-hover.png`
+- `buttons/button-base-pressed.png`
+- `avatars/avatar-frame.png`
+
+`boards/square-light.png` and `boards/square-dark.png` are Batch 2 because they need focused contrast QA against pieces, selected squares, legal move dots, last move highlights, captures, and check indication.
+
+## Batch 1 Integration Order
+
+1. `boards/board-frame.png`
+2. `panels/player-panel-frame.png`
+3. `panels/move-history-panel-frame.png`
+4. `avatars/avatar-frame.png`
+5. `buttons/button-base-normal.png`
+6. `buttons/button-base-hover.png`
+7. `buttons/button-base-pressed.png`
 
 ## Verification For Each Replacement
 
@@ -34,11 +56,13 @@ Replace CSS placeholders one asset group at a time. Keep the chess board playabl
 
 Start with:
 
-- `boards/square-light.png`
-- `boards/square-dark.png`
 - `boards/board-frame.png`
 - `panels/player-panel-frame.png`
 - `panels/move-history-panel-frame.png`
+- `buttons/button-base-normal.png`
+- `buttons/button-base-hover.png`
+- `buttons/button-base-pressed.png`
+- `avatars/avatar-frame.png`
 
 These assets improve the most visible placeholder areas without changing game logic.
 
@@ -63,4 +87,3 @@ Theme assets should use the shared category model in `src/themes/themeTypes.ts`.
 ## Rollback Rule
 
 If an asset breaks layout, clickability, readability, or build output, revert only that asset integration and keep the manifest/docs intact.
-

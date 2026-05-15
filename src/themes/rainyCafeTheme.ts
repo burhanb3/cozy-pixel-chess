@@ -235,4 +235,21 @@ export const rainyCafeTheme: GameTheme = {
     { id: 'bottom-table-item', label: 'Table item slot', placement: 'bottom' },
     { id: 'window-decoration', label: 'Window decor slot', placement: 'background' },
   ],
+  productionBatches: [
+    {
+      id: 'rainy-cafe-batch-1-ui-frames',
+      displayName: 'Rainy Cafe Batch 1 UI Frames',
+      assetPaths: [
+        '/src/assets/themes/rainy-cafe/boards/board-frame.png',
+        '/src/assets/themes/rainy-cafe/panels/player-panel-frame.png',
+        '/src/assets/themes/rainy-cafe/panels/move-history-panel-frame.png',
+        '/src/assets/themes/rainy-cafe/buttons/button-base-normal.png',
+        '/src/assets/themes/rainy-cafe/buttons/button-base-hover.png',
+        '/src/assets/themes/rainy-cafe/buttons/button-base-pressed.png',
+        '/src/assets/themes/rainy-cafe/avatars/avatar-frame.png',
+      ],
+      notes:
+        'First production batch focuses on high-impact UI frames and button states. These paths are metadata only until files exist.',
+    },
+  ],
 }
