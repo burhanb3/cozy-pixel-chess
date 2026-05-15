@@ -1,5 +1,6 @@
 import type { GameTheme } from './themeTypes'
 import avatarFrame from '../assets/themes/rainy-cafe/avatars/avatar-frame.png'
+import rainyRoomBackground from '../assets/themes/rainy-cafe/backgrounds/rainy-room-background.png'
 import boardFrame from '../assets/themes/rainy-cafe/boards/board-frame.png'
 import squareDark from '../assets/themes/rainy-cafe/boards/square-dark.png'
 import squareLight from '../assets/themes/rainy-cafe/boards/square-light.png'
@@ -33,9 +34,9 @@ export const rainyCafeTheme: GameTheme = {
   assets: {
     backgrounds: {
       roomBase: {
-        path: '/src/assets/themes/rainy-cafe/backgrounds/rainy-room-background.png',
+        path: rainyRoomBackground,
         description: 'Full 1440x900 Rainy Cafe room/table base without baked UI text.',
-        status: 'planned',
+        status: 'ready',
       },
     },
     lighting: {

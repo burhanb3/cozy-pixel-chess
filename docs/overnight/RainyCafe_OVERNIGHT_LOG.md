@@ -17,10 +17,12 @@ Branch: `goal/overnight-rainy-cafe-pass`
 ## Generated
 
 - `src/assets/themes/rainy-cafe/panels/bottom-action-bar-frame.png`
+- `src/assets/themes/rainy-cafe/backgrounds/rainy-room-background.png`
 
 ## Integrated
 
 - `src/assets/themes/rainy-cafe/panels/bottom-action-bar-frame.png`
+- `src/assets/themes/rainy-cafe/backgrounds/rainy-room-background.png`
 
 ## Skipped
 
@@ -31,8 +33,9 @@ Branch: `goal/overnight-rainy-cafe-pass`
 
 - Existing baseline: `docs/references/visual-checks/rainy-cafe-batch2.png`
 - Action bar integration: `docs/references/visual-checks/overnight-step-01.png`
+- Room background integration: `docs/references/visual-checks/overnight-step-02.png`
 - Current final screenshot: `docs/references/visual-checks/rainy-cafe-overnight-final.png`
 
 ## Next Recommended Step
 
-Integrate `src/assets/themes/rainy-cafe/panels/bottom-action-bar-frame.png` into the bottom action area, run checks, then capture `docs/references/visual-checks/overnight-step-01.png`.
+Review the integrated room background against the approved reference. If accepted, the next safest production pass is `lighting-vignette-overlay.png`; if the background feels too busy, regenerate the room background before adding more layers.

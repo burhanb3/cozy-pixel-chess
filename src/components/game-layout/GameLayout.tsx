@@ -25,6 +25,7 @@ export function GameLayout({ theme, leftRail, board, rightRail, bottomBar }: Gam
     '--dark-square': theme.colors.darkSquare,
     '--theme-accent': theme.colors.accent,
     '--theme-text': theme.colors.text,
+    '--asset-room-background': `url("${theme.assets.backgrounds.roomBase.path}")`,
     '--asset-board-frame': `url("${theme.assets.boards.frame.path}")`,
     '--asset-square-light': `url("${theme.assets.boards.lightSquare.path}")`,
     '--asset-square-dark': `url("${theme.assets.boards.darkSquare.path}")`,
