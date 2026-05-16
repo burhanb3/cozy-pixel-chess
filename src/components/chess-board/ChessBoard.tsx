@@ -26,6 +26,9 @@ const pieceGlyphs = {
   bk: '♚',
 } as const
 
+const files = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+const ranks = ['8', '7', '6', '5', '4', '3', '2', '1']
+
 export function ChessBoard({
   squares,
   selectedSquare,
@@ -40,6 +43,20 @@ export function ChessBoard({
   return (
     // TODO(asset): replace unicode glyphs with theme.assets.pieces once the piece sprite sheets are ready.
     <div className="chess-board-frame pixelated" aria-label="Playable local chess board">
+      <div className="board-vine vine-top-left" aria-hidden="true" />
+      <div className="board-vine vine-bottom-right" aria-hidden="true" />
+      <div className="board-coordinates files top" aria-hidden="true">
+        {files.map((file) => <span key={`top-${file}`}>{file}</span>)}
+      </div>
+      <div className="board-coordinates files bottom" aria-hidden="true">
+        {files.map((file) => <span key={`bottom-${file}`}>{file}</span>)}
+      </div>
+      <div className="board-coordinates ranks left" aria-hidden="true">
+        {ranks.map((rank) => <span key={`left-${rank}`}>{rank}</span>)}
+      </div>
+      <div className="board-coordinates ranks right" aria-hidden="true">
+        {ranks.map((rank) => <span key={`right-${rank}`}>{rank}</span>)}
+      </div>
       <div className="chess-board">
         {squares.map(({ square, piece }, index) => {
           const isLight = (Math.floor(index / 8) + (index % 8)) % 2 === 0

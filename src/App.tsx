@@ -1,9 +1,11 @@
 import { BottomActions } from './components/bottom-actions/BottomActions'
+import { CapturedPieces } from './components/captured-pieces/CapturedPieces'
 import { ChessBoard } from './components/chess-board/ChessBoard'
+import { CoachBubble } from './components/coach-bubble/CoachBubble'
 import { GameLayout } from './components/game-layout/GameLayout'
 import { MoveHistory } from './components/move-history/MoveHistory'
 import { PlayerCard } from './components/player-card/PlayerCard'
-import { DecorSlot } from './components/theme/DecorSlot'
+import { TurnPlaque } from './components/turn-plaque/TurnPlaque'
 import { placeholderAvatars } from './data/placeholderAvatars'
 import { useOfflineChessGame } from './game/useOfflineChessGame'
 import { defaultTheme } from './themes/themeRegistry'
@@ -21,22 +23,32 @@ function App() {
       theme={defaultTheme}
       leftRail={
         <>
+          <TurnPlaque label={currentTurnLabel} />
           <PlayerCard
             avatar={placeholderAvatars[1]}
             isActive={game.turn === 'b' && !game.isGameOver}
             name="Moon Baker"
+            rating={1526}
             side="b"
             statusText={game.turn === 'b' ? 'Thinking...' : 'Waiting warmly'}
+            timer="07:52"
           />
-          <DecorSlot label="Lamp asset slot" />
-          <DecorSlot label="Cup asset slot" />
+          <CapturedPieces moves={game.moveHistory} />
           <PlayerCard
             avatar={placeholderAvatars[0]}
             isActive={game.turn === 'w' && !game.isGameOver}
             name="Tea Sprite"
+            rating={1478}
             side="w"
             statusText={game.turn === 'w' ? 'Your move' : 'Watching the rain'}
+            timer="08:37"
           />
+          <div className="left-table-decor" aria-hidden="true">
+            <span className="chalkboard-sign">Tea<br />&amp;<br />Focus</span>
+            <span className="steam-cup" />
+            <span className="cookie-plate" />
+            <span className="potted-plant" />
+          </div>
         </>
       }
       board={
@@ -53,14 +65,21 @@ function App() {
       rightRail={
         <>
           <MoveHistory moves={game.moveHistory} />
-          <DecorSlot label="Books asset slot" />
-          <DecorSlot label="Window decor slot" />
+          <button className="analyze-button" type="button" disabled title="Analysis is a future helper feature">
+            <span className="magnifier-icon" aria-hidden="true" />
+            Analyze Position
+          </button>
+          <CoachBubble statusText="In every move, there's a new possibility." />
+          <div className="right-books-decor" aria-hidden="true">
+            <span className="book one" />
+            <span className="book two" />
+            <span className="sleeping-cat" />
+          </div>
         </>
       }
       bottomBar={
         <BottomActions
           canUndo={canUndo}
-          currentTurnLabel={currentTurnLabel}
           onReset={resetGame}
           onUndo={undoLastMove}
           status={game.status}
