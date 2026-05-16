@@ -1,6 +1,5 @@
-import type { GameStatus } from '../../game/gameTypes'
 import { PixelButton } from '../ui/PixelButton'
-import { PixelPanel } from '../ui/PixelPanel'
+import type { GameStatus } from '../../game/gameTypes'
 
 type BottomActionsProps = {
   status: GameStatus
@@ -9,23 +8,17 @@ type BottomActionsProps = {
   onUndo: () => void
 }
 
-const statusLabels: Record<GameStatus, { title: string; detail: string }> = {
-  playing: { title: 'Local play', detail: 'A quiet table for two sides' },
-  check: { title: 'Check', detail: 'The king needs a careful move' },
-  checkmate: { title: 'Checkmate', detail: 'Game finished' },
-  stalemate: { title: 'Stalemate', detail: 'No legal move remains' },
-  draw: { title: 'Draw', detail: 'The game is peacefully even' },
+const quoteLabels: Record<GameStatus, string> = {
+  playing: 'Rainy days are perfect for quiet victories.',
+  check: 'A careful move can quiet the room.',
+  checkmate: 'Checkmate. The cafe keeps the memory warm.',
+  stalemate: 'Stalemate. Even the rain pauses for a draw.',
+  draw: 'A peaceful table, an even game.',
 }
 
 export function BottomActions({ status, canUndo, onReset, onUndo }: BottomActionsProps) {
-  const statusLabel = statusLabels[status]
-
   return (
-    <PixelPanel className="action-bar-panel">
-      <div className="action-status">
-        <p className="action-status-title">{statusLabel.title}</p>
-        <p className="action-status-detail">{statusLabel.detail}</p>
-      </div>
+    <div className="bottom-action-cluster">
       <div className="action-buttons">
         <PixelButton className="button-green action-button-play" onClick={onReset}>
           <span className="control-icon leaf-control" aria-hidden="true" />
@@ -49,7 +42,7 @@ export function BottomActions({ status, canUndo, onReset, onUndo }: BottomAction
           Settings
         </PixelButton>
       </div>
-      <p className="status-quote">Rainy days are perfect for quiet victories.</p>
-    </PixelPanel>
+      <p className="status-quote">{quoteLabels[status]}</p>
+    </div>
   )
 }

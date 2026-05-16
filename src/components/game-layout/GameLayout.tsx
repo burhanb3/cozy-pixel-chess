@@ -44,8 +44,8 @@ export function GameLayout({ theme, leftRail, board, rightRail, bottomBar }: Gam
     '--asset-button-hover': `url("${theme.assets.buttons.baseHover.path}")`,
     '--asset-button-pressed': `url("${theme.assets.buttons.basePressed.path}")`,
     '--asset-avatar-frame': `url("${theme.assets.avatars.frame.path}")`,
-    '--asset-tea-sprite-portrait': `url("${theme.assets.avatars.teaSpritePortrait.path}")`,
-    '--asset-moon-baker-portrait': `url("${theme.assets.avatars.moonBakerPortrait.path}")`,
+    '--asset-tealeaf-portrait': `url("${theme.assets.avatars.teaSpritePortrait.path}")`,
+    '--asset-mossycat-portrait': `url("${theme.assets.avatars.moonBakerPortrait.path}")`,
     '--asset-cat-mascot': `url("${theme.assets.decor.catMascot.path}")`,
   } as CSSProperties
 

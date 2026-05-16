@@ -25,23 +25,23 @@ function App() {
         <>
           <TurnPlaque label={currentTurnLabel} />
           <PlayerCard
-            avatar={placeholderAvatars[1]}
-            isActive={game.turn === 'b' && !game.isGameOver}
-            name="Moon Baker"
-            rating={1526}
-            side="b"
-            statusText={game.turn === 'b' ? 'Thinking...' : 'Waiting warmly'}
-            timer="07:52"
-          />
-          <CapturedPieces moves={game.moveHistory} />
-          <PlayerCard
             avatar={placeholderAvatars[0]}
             isActive={game.turn === 'w' && !game.isGameOver}
-            name="Tea Sprite"
+            name="TeaLeaf"
             rating={1478}
             side="w"
             statusText={game.turn === 'w' ? 'Your move' : 'Watching the rain'}
             timer="08:37"
+          />
+          <CapturedPieces moves={game.moveHistory} />
+          <PlayerCard
+            avatar={placeholderAvatars[1]}
+            isActive={game.turn === 'b' && !game.isGameOver}
+            name="MossyCat"
+            rating={1526}
+            side="b"
+            statusText={game.turn === 'b' ? 'Thinking...' : 'Waiting warmly'}
+            timer="07:52"
           />
         </>
       }

@@ -28,7 +28,7 @@ function CapturedTray({ label, pieces }: { label: string; pieces: PieceSymbol[] 
       </div>
       <div className="captured-piece-row" aria-label={`${label} captured pieces`}>
         {pieces.length === 0 ? (
-          <span className="captured-empty">Quiet table</span>
+          <span className="captured-empty" aria-label="No captured pieces yet" />
         ) : (
           pieces.map((piece, index) => (
             <span className="captured-piece" key={`${piece}-${index}`} aria-label={`${piece} captured`}>
@@ -44,11 +44,11 @@ function CapturedTray({ label, pieces }: { label: string; pieces: PieceSymbol[] 
 export function CapturedPieces({ moves }: CapturedPiecesProps) {
   return (
     <section className="captured-stack" aria-label="Captured pieces">
-      <CapturedTray label="Black captured" pieces={getCapturedBy(moves, 'w')} />
+      <CapturedTray label="Captured" pieces={getCapturedBy(moves, 'w')} />
       <div className="vs-medallion" aria-label="versus">
         VS
       </div>
-      <CapturedTray label="White captured" pieces={getCapturedBy(moves, 'b')} />
+      <CapturedTray label="Captured" pieces={getCapturedBy(moves, 'b')} />
     </section>
   )
 }

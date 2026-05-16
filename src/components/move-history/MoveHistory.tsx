@@ -20,11 +20,6 @@ export function MoveHistory({ moves }: MoveHistoryProps) {
         <span>Move History</span>
         <span className="leaf-sprig mirror" aria-hidden="true" />
       </div>
-      <div className="move-history-columns">
-        <span>#</span>
-        <span>White</span>
-        <span>Black</span>
-      </div>
       <div className="move-history-scroll">
         {rows.length === 0 ? (
           <p className="move-history-empty">No moves yet</p>
