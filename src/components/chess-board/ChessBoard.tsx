@@ -11,21 +11,6 @@ type ChessBoardProps = {
   onSquareClick: (square: Square) => void
 }
 
-const pieceGlyphs = {
-  wp: '♙',
-  wn: '♘',
-  wb: '♗',
-  wr: '♖',
-  wq: '♕',
-  wk: '♔',
-  bp: '♟',
-  bn: '♞',
-  bb: '♝',
-  br: '♜',
-  bq: '♛',
-  bk: '♚',
-} as const
-
 const files = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
 const ranks = ['8', '7', '6', '5', '4', '3', '2', '1']
 
@@ -41,10 +26,7 @@ export function ChessBoard({
   const legalTargets = new Map(legalMoves.map((move) => [move.to, move]))
 
   return (
-    // TODO(asset): replace unicode glyphs with theme.assets.pieces once the piece sprite sheets are ready.
     <div className="chess-board-frame pixelated" aria-label="Playable local chess board">
-      <div className="board-vine vine-top-left" aria-hidden="true" />
-      <div className="board-vine vine-bottom-right" aria-hidden="true" />
       <div className="board-coordinates files top" aria-hidden="true">
         {files.map((file) => <span key={`top-${file}`}>{file}</span>)}
       </div>
@@ -68,7 +50,6 @@ export function ChessBoard({
           const isCheck = checkSquare === square
           const isInvalid = invalidSquare === square
           const pieceColor = piece?.color
-          const glyph = piece ? pieceGlyphs[`${piece.color}${piece.type}` as keyof typeof pieceGlyphs] : null
           const squareStateLabel = [
             isSelected ? 'selected' : '',
             isLegal ? 'legal destination' : '',
@@ -87,7 +68,7 @@ export function ChessBoard({
               onClick={() => onSquareClick(square)}
               type="button"
             >
-              {glyph ? <span className={`piece ${pieceColor === 'w' ? 'white' : 'black'}`}>{glyph}</span> : null}
+              {piece ? <span className={`piece ${pieceColor === 'w' ? 'white' : 'black'} piece-${piece.type}`} /> : null}
             </button>
           )
         })}

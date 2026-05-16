@@ -16,13 +16,12 @@ export function PlayerCard({ name, side, avatar, isActive, rating, timer, status
   return (
     <PixelPanel className={`player-card-panel ${isActive ? 'is-active' : ''}`}>
       <div className="player-card-content">
-        {/* TODO(asset): replace initials with theme avatar portraits once the portrait set is ready. */}
         <div
-          className="avatar-frame player-avatar"
+          className={`avatar-frame player-avatar avatar-${avatar.id}`}
           style={{ backgroundColor: avatar.color }}
-          aria-label={`${avatar.label} avatar placeholder`}
+          aria-label={`${avatar.label} avatar portrait`}
         >
-          {avatar.initials}
+          <span className="avatar-fallback">{avatar.initials}</span>
         </div>
         <div className="player-info">
           <p className="player-name">{name}</p>

@@ -43,12 +43,6 @@ function App() {
             statusText={game.turn === 'w' ? 'Your move' : 'Watching the rain'}
             timer="08:37"
           />
-          <div className="left-table-decor" aria-hidden="true">
-            <span className="chalkboard-sign">Tea<br />&amp;<br />Focus</span>
-            <span className="steam-cup" />
-            <span className="cookie-plate" />
-            <span className="potted-plant" />
-          </div>
         </>
       }
       board={
@@ -70,11 +64,6 @@ function App() {
             Analyze Position
           </button>
           <CoachBubble statusText="In every move, there's a new possibility." />
-          <div className="right-books-decor" aria-hidden="true">
-            <span className="book one" />
-            <span className="book two" />
-            <span className="sleeping-cat" />
-          </div>
         </>
       }
       bottomBar={
