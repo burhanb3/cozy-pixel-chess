@@ -18,18 +18,31 @@ export type ThemeAssetSlots = {
     darkSquare: ThemeAssetRef
   }
   panels: {
+    turnPlaqueFrame: ThemeAssetRef
     playerFrame: ThemeAssetRef
+    capturedPiecesTray: ThemeAssetRef
+    vsBadge: ThemeAssetRef
     moveHistoryFrame: ThemeAssetRef
+    analyzeButtonFrame: ThemeAssetRef
+    coachCommentPanel: ThemeAssetRef
     actionBarFrame: ThemeAssetRef
+    quoteBannerFrame: ThemeAssetRef
   }
   buttons: {
     baseNormal: ThemeAssetRef
     baseHover: ThemeAssetRef
     basePressed: ThemeAssetRef
+    play: ThemeAssetRef
+    undo: ThemeAssetRef
+    hint: ThemeAssetRef
+    focus: ThemeAssetRef
+    settings: ThemeAssetRef
   }
   avatars: {
     frame: ThemeAssetRef
     placeholderSet: ThemeAssetRef
+    teaLeafPortrait: ThemeAssetRef
+    mossyCatPortrait: ThemeAssetRef
   }
   pieces: {
     whiteSet: ThemeAssetRef
@@ -42,6 +55,7 @@ export type ThemeAssetSlots = {
     plant: ThemeAssetRef
     rainyWindow: ThemeAssetRef
     catBed: ThemeAssetRef
+    catMascot: ThemeAssetRef
     leafCornerDecals: ThemeAssetRef
     capturedPiecesTray: ThemeAssetRef
     speechBubblePanel: ThemeAssetRef

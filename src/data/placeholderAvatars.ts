@@ -6,6 +6,6 @@ export type PlaceholderAvatar = {
 }
 
 export const placeholderAvatars: PlaceholderAvatar[] = [
-  { id: 'tea-sprite', label: 'Tea Sprite', initials: 'TS', color: '#f2bd57' },
-  { id: 'moon-baker', label: 'Moon Baker', initials: 'MB', color: '#8fb7c8' },
+  { id: 'tealeaf', label: 'TeaLeaf', initials: 'TL', color: '#6f8c77' },
+  { id: 'mossycat', label: 'MossyCat', initials: 'MC', color: '#5c7568' },
 ]

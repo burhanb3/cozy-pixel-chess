@@ -11,21 +11,6 @@ type ChessBoardProps = {
   onSquareClick: (square: Square) => void
 }
 
-const pieceGlyphs = {
-  wp: '♙',
-  wn: '♘',
-  wb: '♗',
-  wr: '♖',
-  wq: '♕',
-  wk: '♔',
-  bp: '♟',
-  bn: '♞',
-  bb: '♝',
-  br: '♜',
-  bq: '♛',
-  bk: '♚',
-} as const
-
 export function ChessBoard({
   squares,
   selectedSquare,
@@ -38,7 +23,6 @@ export function ChessBoard({
   const legalTargets = new Map(legalMoves.map((move) => [move.to, move]))
 
   return (
-    // TODO(asset): replace unicode glyphs with theme.assets.pieces once the piece sprite sheets are ready.
     <div className="chess-board-frame pixelated" aria-label="Playable local chess board">
       <div className="chess-board">
         {squares.map(({ square, piece }, index) => {
@@ -51,7 +35,6 @@ export function ChessBoard({
           const isCheck = checkSquare === square
           const isInvalid = invalidSquare === square
           const pieceColor = piece?.color
-          const glyph = piece ? pieceGlyphs[`${piece.color}${piece.type}` as keyof typeof pieceGlyphs] : null
           const squareStateLabel = [
             isSelected ? 'selected' : '',
             isLegal ? 'legal destination' : '',
@@ -70,7 +53,7 @@ export function ChessBoard({
               onClick={() => onSquareClick(square)}
               type="button"
             >
-              {glyph ? <span className={`piece ${pieceColor === 'w' ? 'white' : 'black'}`}>{glyph}</span> : null}
+              {piece ? <span className={`piece ${pieceColor === 'w' ? 'white' : 'black'} piece-${piece.type}`} /> : null}
             </button>
           )
         })}
