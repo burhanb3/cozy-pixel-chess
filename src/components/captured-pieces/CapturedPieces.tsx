@@ -5,20 +5,30 @@ type CapturedPiecesProps = {
   moves: MoveHistoryEntry[]
 }
 
-const pieceLabels: Record<PieceSymbol, string> = {
-  p: 'P',
-  n: 'N',
-  b: 'B',
-  r: 'R',
-  q: 'Q',
-  k: 'K',
+type CapturedPiece = {
+  color: Color
+  type: PieceSymbol
 }
 
-function getCapturedBy(moves: MoveHistoryEntry[], capturer: Color): PieceSymbol[] {
-  return moves.filter((move) => move.color === capturer && move.captured).map((move) => move.captured as PieceSymbol)
+const pieceNames: Record<PieceSymbol, string> = {
+  p: 'pawn',
+  n: 'knight',
+  b: 'bishop',
+  r: 'rook',
+  q: 'queen',
+  k: 'king',
 }
 
-function CapturedTray({ label, pieces }: { label: string; pieces: PieceSymbol[] }) {
+function getCapturedBy(moves: MoveHistoryEntry[], capturer: Color): CapturedPiece[] {
+  return moves
+    .filter((move) => move.color === capturer && move.captured)
+    .map((move) => ({
+      color: move.color === 'w' ? 'b' : 'w',
+      type: move.captured as PieceSymbol,
+    }))
+}
+
+function CapturedTray({ label, pieces }: { label: string; pieces: CapturedPiece[] }) {
   return (
     <div className="captured-tray">
       <div className="captured-tray-title">
@@ -30,11 +40,16 @@ function CapturedTray({ label, pieces }: { label: string; pieces: PieceSymbol[] 
         {pieces.length === 0 ? (
           <span className="captured-empty" aria-label="No captured pieces yet" />
         ) : (
-          pieces.map((piece, index) => (
-            <span className="captured-piece" key={`${piece}-${index}`} aria-label={`${piece} captured`}>
-              {pieceLabels[piece]}
-            </span>
-          ))
+          pieces.map((piece, index) => {
+            const colorClass = piece.color === 'w' ? 'white' : 'black'
+            return (
+              <span
+                className={`captured-piece captured-piece-sprite ${colorClass} piece-${piece.type}`}
+                key={`${piece.color}-${piece.type}-${index}`}
+                aria-label={`${colorClass} ${pieceNames[piece.type]} captured`}
+              />
+            )
+          })
         )}
       </div>
     </div>

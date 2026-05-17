@@ -9,6 +9,11 @@ import squareLight from '../assets/themes/rainy-cafe/boards/square-light.png'
 import buttonBaseHover from '../assets/themes/rainy-cafe/buttons/button-base-hover.png'
 import buttonBaseNormal from '../assets/themes/rainy-cafe/buttons/button-base-normal.png'
 import buttonBasePressed from '../assets/themes/rainy-cafe/buttons/button-base-pressed.png'
+import focusButton from '../assets/themes/rainy-cafe/buttons/focus-button.png'
+import hintButton from '../assets/themes/rainy-cafe/buttons/hint-button.png'
+import playButton from '../assets/themes/rainy-cafe/buttons/play-button.png'
+import settingsButton from '../assets/themes/rainy-cafe/buttons/settings-button.png'
+import undoButton from '../assets/themes/rainy-cafe/buttons/undo-button.png'
 import catMascot from '../assets/themes/rainy-cafe/decor/cat-mascot.png'
 import analyzePositionButtonFrame from '../assets/themes/rainy-cafe/panels/analyze-position-button-frame.png'
 import bottomActionBarFrame from '../assets/themes/rainy-cafe/panels/bottom-action-bar-frame.png'
@@ -140,6 +145,31 @@ export const rainyCafeTheme: GameTheme = {
       basePressed: {
         path: buttonBasePressed,
         description: 'Pressed state action button base without text.',
+        status: 'ready',
+      },
+      play: {
+        path: playButton,
+        description: 'Final fidelity green rounded-square Play button skin with leaf icon and no baked label.',
+        status: 'ready',
+      },
+      undo: {
+        path: undoButton,
+        description: 'Final fidelity orange-brown rounded-square Undo button skin with curved arrow icon and no baked label.',
+        status: 'ready',
+      },
+      hint: {
+        path: hintButton,
+        description: 'Final fidelity golden rounded-square Hint button skin with lightbulb icon and empty live-count badge area.',
+        status: 'ready',
+      },
+      focus: {
+        path: focusButton,
+        description: 'Final fidelity blue rounded-square Focus button skin with crystal icon and no baked label.',
+        status: 'ready',
+      },
+      settings: {
+        path: settingsButton,
+        description: 'Final fidelity purple rounded-square Settings button skin with gear icon and no baked label.',
         status: 'ready',
       },
     },

@@ -32,6 +32,11 @@ export type ThemeAssetSlots = {
     baseNormal: ThemeAssetRef
     baseHover: ThemeAssetRef
     basePressed: ThemeAssetRef
+    play: ThemeAssetRef
+    undo: ThemeAssetRef
+    hint: ThemeAssetRef
+    focus: ThemeAssetRef
+    settings: ThemeAssetRef
   }
   avatars: {
     frame: ThemeAssetRef
