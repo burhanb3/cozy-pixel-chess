@@ -1,6 +1,9 @@
 import type { Square } from 'chess.js'
 import type { BoardSquare, LastMove, LegalMove } from '../../game/gameTypes'
 
+const files = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+const ranks = ['8', '7', '6', '5', '4', '3', '2', '1']
+
 type ChessBoardProps = {
   squares: BoardSquare[]
   selectedSquare: Square | null
@@ -24,6 +27,28 @@ export function ChessBoard({
 
   return (
     <div className="chess-board-frame pixelated" aria-label="Playable local chess board">
+      <div className="board-coordinate-layer" aria-hidden="true">
+        <div className="board-coordinates files top">
+          {files.map((file) => (
+            <span key={`top-${file}`}>{file}</span>
+          ))}
+        </div>
+        <div className="board-coordinates files bottom">
+          {files.map((file) => (
+            <span key={`bottom-${file}`}>{file}</span>
+          ))}
+        </div>
+        <div className="board-coordinates ranks left">
+          {ranks.map((rank) => (
+            <span key={`left-${rank}`}>{rank}</span>
+          ))}
+        </div>
+        <div className="board-coordinates ranks right">
+          {ranks.map((rank) => (
+            <span key={`right-${rank}`}>{rank}</span>
+          ))}
+        </div>
+      </div>
       <div className="chess-board">
         {squares.map(({ square, piece }, index) => {
           const isLight = (Math.floor(index / 8) + (index % 8)) % 2 === 0

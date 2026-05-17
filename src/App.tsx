@@ -60,7 +60,6 @@ function App() {
         <>
           <MoveHistory moves={game.moveHistory} />
           <button className="analyze-button" type="button" disabled title="Analysis is planned for a later helper pass">
-            <span className="magnifier-icon" aria-hidden="true" />
             Analyze Position
           </button>
           <CoachBubble statusText="In every move, there's a new possibility." />
