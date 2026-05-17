@@ -1,13 +1,31 @@
 import type { GameTheme } from './themeTypes'
 import avatarFrame from '../assets/themes/rainy-cafe/avatars/avatar-frame.png'
+import avatarMossycat from '../assets/themes/rainy-cafe/avatars/avatar-mossycat.png'
+import avatarTealeaf from '../assets/themes/rainy-cafe/avatars/avatar-tealeaf.png'
+import rainyRoomBackground from '../assets/themes/rainy-cafe/backgrounds/rainy-room-background.png'
 import boardFrame from '../assets/themes/rainy-cafe/boards/board-frame.png'
 import squareDark from '../assets/themes/rainy-cafe/boards/square-dark.png'
 import squareLight from '../assets/themes/rainy-cafe/boards/square-light.png'
 import buttonBaseHover from '../assets/themes/rainy-cafe/buttons/button-base-hover.png'
 import buttonBaseNormal from '../assets/themes/rainy-cafe/buttons/button-base-normal.png'
 import buttonBasePressed from '../assets/themes/rainy-cafe/buttons/button-base-pressed.png'
+import focusButton from '../assets/themes/rainy-cafe/buttons/focus-button.png'
+import hintButton from '../assets/themes/rainy-cafe/buttons/hint-button.png'
+import playButton from '../assets/themes/rainy-cafe/buttons/play-button.png'
+import settingsButton from '../assets/themes/rainy-cafe/buttons/settings-button.png'
+import undoButton from '../assets/themes/rainy-cafe/buttons/undo-button.png'
+import catMascot from '../assets/themes/rainy-cafe/decor/cat-mascot.png'
+import analyzePositionButtonFrame from '../assets/themes/rainy-cafe/panels/analyze-position-button-frame.png'
+import bottomActionBarFrame from '../assets/themes/rainy-cafe/panels/bottom-action-bar-frame.png'
+import capturedPiecesTray from '../assets/themes/rainy-cafe/panels/captured-pieces-tray.png'
+import coachCommentPanel from '../assets/themes/rainy-cafe/panels/coach-comment-panel.png'
 import moveHistoryPanelFrame from '../assets/themes/rainy-cafe/panels/move-history-panel-frame.png'
 import playerPanelFrame from '../assets/themes/rainy-cafe/panels/player-panel-frame.png'
+import quoteBannerFrame from '../assets/themes/rainy-cafe/panels/quote-banner-frame.png'
+import turnPlaqueFrame from '../assets/themes/rainy-cafe/panels/turn-plaque-frame.png'
+import vsBadge from '../assets/themes/rainy-cafe/panels/vs-badge.png'
+import blackPieceSet from '../assets/themes/rainy-cafe/pieces/black-piece-set.png'
+import whitePieceSet from '../assets/themes/rainy-cafe/pieces/white-piece-set.png'
 
 export const rainyCafeTheme: GameTheme = {
   id: 'rainy-cafe',
@@ -32,9 +50,9 @@ export const rainyCafeTheme: GameTheme = {
   assets: {
     backgrounds: {
       roomBase: {
-        path: '/src/assets/themes/rainy-cafe/backgrounds/rainy-room-background.png',
+        path: rainyRoomBackground,
         description: 'Full 1440x900 Rainy Cafe room/table base without baked UI text.',
-        status: 'planned',
+        status: 'ready',
       },
     },
     lighting: {
@@ -67,9 +85,24 @@ export const rainyCafeTheme: GameTheme = {
       },
     },
     panels: {
+      turnPlaqueFrame: {
+        path: turnPlaqueFrame,
+        description: 'Blank carved wood and parchment turn plaque frame for live turn text.',
+        status: 'ready',
+      },
       playerFrame: {
         path: playerPanelFrame,
         description: 'Empty player card frame for live avatar and text.',
+        status: 'ready',
+      },
+      capturedPiecesTray: {
+        path: capturedPiecesTray,
+        description: 'Blank captured pieces tray frame for live captured piece values.',
+        status: 'ready',
+      },
+      vsBadge: {
+        path: vsBadge,
+        description: 'Small carved wood versus badge without baked dynamic content.',
         status: 'ready',
       },
       moveHistoryFrame: {
@@ -77,10 +110,25 @@ export const rainyCafeTheme: GameTheme = {
         description: 'Empty move history frame for live move notation.',
         status: 'ready',
       },
+      analyzeButtonFrame: {
+        path: analyzePositionButtonFrame,
+        description: 'Chunky analyze button frame with magnifier ornament and no baked label.',
+        status: 'ready',
+      },
+      coachCommentPanel: {
+        path: coachCommentPanel,
+        description: 'Blank parchment coach speech bubble frame for live helper text.',
+        status: 'ready',
+      },
       actionBarFrame: {
-        path: '/src/assets/themes/rainy-cafe/panels/bottom-action-bar-frame.png',
+        path: bottomActionBarFrame,
         description: 'Bottom bar frame for live status and controls.',
-        status: 'planned',
+        status: 'ready',
+      },
+      quoteBannerFrame: {
+        path: quoteBannerFrame,
+        description: 'Blank lower quote/status banner frame for live quote text.',
+        status: 'ready',
       },
     },
     buttons: {
@@ -99,6 +147,31 @@ export const rainyCafeTheme: GameTheme = {
         description: 'Pressed state action button base without text.',
         status: 'ready',
       },
+      play: {
+        path: playButton,
+        description: 'Final fidelity green rounded-square Play button skin with leaf icon and no baked label.',
+        status: 'ready',
+      },
+      undo: {
+        path: undoButton,
+        description: 'Final fidelity orange-brown rounded-square Undo button skin with curved arrow icon and no baked label.',
+        status: 'ready',
+      },
+      hint: {
+        path: hintButton,
+        description: 'Final fidelity golden rounded-square Hint button skin with lightbulb icon and empty live-count badge area.',
+        status: 'ready',
+      },
+      focus: {
+        path: focusButton,
+        description: 'Final fidelity blue rounded-square Focus button skin with crystal icon and no baked label.',
+        status: 'ready',
+      },
+      settings: {
+        path: settingsButton,
+        description: 'Final fidelity purple rounded-square Settings button skin with gear icon and no baked label.',
+        status: 'ready',
+      },
     },
     avatars: {
       frame: {
@@ -108,20 +181,30 @@ export const rainyCafeTheme: GameTheme = {
       },
       placeholderSet: {
         path: '/src/assets/themes/rainy-cafe/avatars/avatar-placeholder-set.png',
-        description: 'Temporary Rainy Cafe avatar portrait set.',
-        status: 'planned',
+        description: 'Temporary Rainy Cafe avatar portrait set superseded by per-player portraits.',
+        status: 'placeholder',
+      },
+      teaSpritePortrait: {
+        path: avatarTealeaf,
+        description: 'Tea Sprite cozy Rainy Cafe portrait asset.',
+        status: 'ready',
+      },
+      moonBakerPortrait: {
+        path: avatarMossycat,
+        description: 'Moon Baker cozy Rainy Cafe portrait asset.',
+        status: 'ready',
       },
     },
     pieces: {
       whiteSet: {
-        path: '/src/assets/themes/rainy-cafe/pieces/white-piece-set.png',
+        path: whitePieceSet,
         description: 'White chess piece sprite sheet.',
-        status: 'planned',
+        status: 'ready',
       },
       blackSet: {
-        path: '/src/assets/themes/rainy-cafe/pieces/black-piece-set.png',
+        path: blackPieceSet,
         description: 'Black chess piece sprite sheet.',
-        status: 'planned',
+        status: 'ready',
       },
     },
     decor: {
@@ -160,16 +243,6 @@ export const rainyCafeTheme: GameTheme = {
         description: 'Reusable leaf and flower corner decals.',
         status: 'planned',
       },
-      capturedPiecesTray: {
-        path: '/src/assets/themes/rainy-cafe/panels/captured-pieces-tray.png',
-        description: 'Future captured pieces tray frame.',
-        status: 'planned',
-      },
-      speechBubblePanel: {
-        path: '/src/assets/themes/rainy-cafe/panels/coach-comment-panel.png',
-        description: 'Future coach comment panel without baked text.',
-        status: 'planned',
-      },
       timerPill: {
         path: '/src/assets/themes/rainy-cafe/panels/timer-pill-frame.png',
         description: 'Future timer pill without baked digits.',
@@ -179,6 +252,11 @@ export const rainyCafeTheme: GameTheme = {
         path: '/src/assets/themes/rainy-cafe/panels/move-row-highlight.png',
         description: 'Future move history row highlight texture.',
         status: 'planned',
+      },
+      catMascot: {
+        path: catMascot,
+        description: 'Tea-drinking Rainy Cafe cat mascot asset.',
+        status: 'ready',
       },
     },
     particles: {
@@ -227,7 +305,7 @@ export const rainyCafeTheme: GameTheme = {
   },
   boardStyle: {
     frame: 'dark carved wood frame with leafy corner decor',
-    pieceSet: 'placeholder classic unicode pieces until pixel pieces are imported',
+    pieceSet: 'Rainy Cafe ivory and espresso pixel-art sprite sheets',
   },
   panelStyle: {
     frame: 'stacked cream parchment panels with dark wood trim',
@@ -262,9 +340,18 @@ export const rainyCafeTheme: GameTheme = {
         '/src/assets/themes/rainy-cafe/buttons/button-base-hover.png',
         '/src/assets/themes/rainy-cafe/buttons/button-base-pressed.png',
         '/src/assets/themes/rainy-cafe/avatars/avatar-frame.png',
+        '/src/assets/themes/rainy-cafe/panels/turn-plaque-frame.png',
+        '/src/assets/themes/rainy-cafe/panels/captured-pieces-tray.png',
+        '/src/assets/themes/rainy-cafe/panels/vs-badge.png',
+        '/src/assets/themes/rainy-cafe/panels/analyze-position-button-frame.png',
+        '/src/assets/themes/rainy-cafe/panels/coach-comment-panel.png',
+        '/src/assets/themes/rainy-cafe/panels/quote-banner-frame.png',
+        '/src/assets/themes/rainy-cafe/decor/cat-mascot.png',
+        '/src/assets/themes/rainy-cafe/avatars/avatar-tealeaf.png',
+        '/src/assets/themes/rainy-cafe/avatars/avatar-mossycat.png',
       ],
       notes:
-        'First production batch focuses on high-impact UI frames and button states. These paths are metadata only until files exist.',
+        'First production batch plus reconstruction chrome assets focuses on high-impact UI frames, portraits, mascot, and button states.',
     },
     {
       id: 'rainy-cafe-batch-2-board-squares',
@@ -275,6 +362,16 @@ export const rainyCafeTheme: GameTheme = {
       ],
       notes:
         'Second production batch replaces flat CSS board square colors with low-contrast tile textures. Requires contrast QA for pieces and board states.',
+    },
+    {
+      id: 'rainy-cafe-reconstruction-piece-sprites',
+      displayName: 'Rainy Cafe Reconstruction Piece Sprites',
+      assetPaths: [
+        '/src/assets/themes/rainy-cafe/pieces/white-piece-set.png',
+        '/src/assets/themes/rainy-cafe/pieces/black-piece-set.png',
+      ],
+      notes:
+        'Reconstruction pass replaces Unicode board glyphs with live sprite-sheet pieces while preserving square buttons and move state overlays.',
     },
   ],
 }

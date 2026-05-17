@@ -14,15 +14,15 @@ export function MoveHistory({ moves }: MoveHistoryProps) {
   }))
 
   return (
-    <PixelPanel title="Move History" className="move-history-panel max-h-full overflow-hidden">
-      <div className="mb-2 grid grid-cols-[2rem_1fr_1fr] gap-2 rounded bg-[#3d251d]/20 px-2 py-1 text-xs font-black uppercase tracking-wide text-[#4b2a20]">
-        <span>#</span>
-        <span>White</span>
-        <span>Black</span>
+    <PixelPanel className="move-history-panel max-h-full overflow-hidden">
+      <div className="move-history-heading">
+        <span className="leaf-sprig" aria-hidden="true" />
+        <span>Move History</span>
+        <span className="leaf-sprig mirror" aria-hidden="true" />
       </div>
-      <div className="max-h-[292px] overflow-y-auto pr-1 text-sm font-bold">
+      <div className="move-history-scroll">
         {rows.length === 0 ? (
-          <p className="py-8 text-center text-[#6d4a34]">No moves yet</p>
+          <p className="move-history-empty">No moves yet</p>
         ) : (
           <ol className="space-y-1">
             {rows.map((row) => {
@@ -30,7 +30,7 @@ export function MoveHistory({ moves }: MoveHistoryProps) {
 
               return (
               <li
-                className={`move-row grid grid-cols-[2rem_1fr_1fr] gap-2 rounded px-2 py-1 ${isLastRow ? 'is-latest' : ''}`}
+                className={`move-row ${isLastRow ? 'is-latest' : ''}`}
                 key={row.moveNumber}
               >
                 <span className="text-[#6d4a34]">{row.moveNumber}.</span>

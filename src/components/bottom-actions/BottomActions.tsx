@@ -1,47 +1,48 @@
-import type { GameStatus } from '../../game/gameTypes'
 import { PixelButton } from '../ui/PixelButton'
-import { PixelPanel } from '../ui/PixelPanel'
+import type { GameStatus } from '../../game/gameTypes'
 
 type BottomActionsProps = {
   status: GameStatus
-  currentTurnLabel: string
   canUndo: boolean
   onReset: () => void
   onUndo: () => void
 }
 
-const statusLabels: Record<GameStatus, { title: string; detail: string }> = {
-  playing: { title: 'Local play', detail: 'A quiet table for two sides' },
-  check: { title: 'Check', detail: 'The king needs a careful move' },
-  checkmate: { title: 'Checkmate', detail: 'Game finished' },
-  stalemate: { title: 'Stalemate', detail: 'No legal move remains' },
-  draw: { title: 'Draw', detail: 'The game is peacefully even' },
+const quoteLabels: Record<GameStatus, string> = {
+  playing: 'Rainy days are perfect for quiet victories.',
+  check: 'A careful move can quiet the room.',
+  checkmate: 'Checkmate. The cafe keeps the memory warm.',
+  stalemate: 'Stalemate. Even the rain pauses for a draw.',
+  draw: 'A peaceful table, an even game.',
 }
 
-export function BottomActions({ status, currentTurnLabel, canUndo, onReset, onUndo }: BottomActionsProps) {
-  const statusLabel = statusLabels[status]
-
+export function BottomActions({ status, canUndo, onReset, onUndo }: BottomActionsProps) {
   return (
-    <PixelPanel className="action-bar-panel flex flex-wrap items-center justify-between gap-3">
-      <div className="flex flex-wrap items-center gap-3 text-left">
-        <div>
-          <p className="text-xs font-black uppercase tracking-wide">{statusLabel.title}</p>
-          <p className="text-xs font-bold text-[#6d4a34]">{statusLabel.detail}</p>
-        </div>
-        <p className="turn-pill text-sm font-black">{currentTurnLabel}</p>
-      </div>
-      <div className="action-buttons flex flex-wrap gap-2">
-        <PixelButton className="button-green" onClick={onReset}>New Game</PixelButton>
+    <div className="bottom-action-cluster">
+      <div className="action-buttons">
+        <PixelButton className="button-green action-button-play" onClick={onReset}>
+          <span className="control-icon leaf-control" aria-hidden="true" />
+          Play
+        </PixelButton>
         <PixelButton className="button-brown" disabled={!canUndo} onClick={onUndo}>
+          <span className="control-icon undo-control" aria-hidden="true" />
           Undo
         </PixelButton>
         <PixelButton className="button-gold" disabled title="Hints are planned for a later MVP step">
-          Hint Soon
+          <span className="control-icon hint-control" aria-hidden="true" />
+          Hint
+          <span className="hint-count" aria-label="3 hints available later">3</span>
         </PixelButton>
-        <PixelButton className="button-blue" disabled title="Puzzle mode is planned but intentionally not implemented yet">
-          Puzzle Soon
+        <PixelButton className="button-blue" disabled title="Focus mode is planned for a later calm-play pass">
+          <span className="control-icon focus-control" aria-hidden="true" />
+          Focus
+        </PixelButton>
+        <PixelButton className="button-purple" disabled title="Settings are planned but intentionally not implemented yet">
+          <span className="control-icon settings-control" aria-hidden="true" />
+          Settings
         </PixelButton>
       </div>
-    </PixelPanel>
+      <p className="status-quote">{quoteLabels[status]}</p>
+    </div>
   )
 }
