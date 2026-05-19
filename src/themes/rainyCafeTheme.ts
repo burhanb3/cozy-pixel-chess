@@ -24,8 +24,8 @@ import playerPanelFrame from '../assets/themes/rainy-cafe/panels/player-panel-fr
 import quoteBannerFrame from '../assets/themes/rainy-cafe/panels/quote-banner-frame.png'
 import turnPlaqueFrame from '../assets/themes/rainy-cafe/panels/turn-plaque-frame.png'
 import vsBadge from '../assets/themes/rainy-cafe/panels/vs-badge.png'
-import blackPieceSetReferenceV2 from '../assets/themes/rainy-cafe/pieces/black-piece-set-reference-v2.png'
-import whitePieceSetReferenceV2 from '../assets/themes/rainy-cafe/pieces/white-piece-set-reference-v2.png'
+import blackPieceSetFinal from '../assets/themes/rainy-cafe/pieces/final/black-piece-set.png'
+import whitePieceSetFinal from '../assets/themes/rainy-cafe/pieces/final/white-piece-set.png'
 
 export const rainyCafeTheme: GameTheme = {
   id: 'rainy-cafe',
@@ -197,13 +197,13 @@ export const rainyCafeTheme: GameTheme = {
     },
     pieces: {
       whiteSet: {
-        path: whitePieceSetReferenceV2,
-        description: 'Reference-derived white piece sprite sheet in p,n,b,r,q,k order.',
+        path: whitePieceSetFinal,
+        description: 'Final fresh-generated white piece sprite sheet in p,n,b,r,q,k order.',
         status: 'ready',
       },
       blackSet: {
-        path: blackPieceSetReferenceV2,
-        description: 'Reference-derived black piece sprite sheet in p,n,b,r,q,k order.',
+        path: blackPieceSetFinal,
+        description: 'Final fresh-generated black piece sprite sheet in p,n,b,r,q,k order.',
         status: 'ready',
       },
     },
@@ -315,7 +315,7 @@ export const rainyCafeTheme: GameTheme = {
   },
   boardStyle: {
     frame: 'dark carved wood frame with leafy corner decor',
-    pieceSet: 'placeholder classic unicode pieces until pixel pieces are imported',
+    pieceSet: 'fresh final Rainy Cafe pixel-art sprite pieces',
   },
   panelStyle: {
     frame: 'stacked cream parchment panels with dark wood trim',

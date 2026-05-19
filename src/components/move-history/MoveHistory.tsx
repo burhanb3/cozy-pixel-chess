@@ -18,7 +18,11 @@ export function MoveHistory({ moves }: MoveHistoryProps) {
       <div className="move-history-heading">Move History</div>
       <div className="move-history-scroll">
         {rows.length === 0 ? (
-          <p className="move-history-empty">No moves yet</p>
+          <div className="move-history-empty" aria-label="No moves yet">
+            <span />
+            <span />
+            <span />
+          </div>
         ) : (
           <ol className="move-history-list">
             {rows.map((row) => {

@@ -38,7 +38,11 @@ function CapturedTray({ pieces }: { pieces: CapturedPiece[] }) {
       </div>
       <div className="captured-piece-row" aria-label="Captured pieces">
         {pieces.length === 0 ? (
-          <span className="captured-empty" aria-label="No captured pieces yet" />
+          <span className="captured-empty" aria-label="No captured pieces yet">
+            <span />
+            <span />
+            <span />
+          </span>
         ) : (
           pieces.map((piece, index) => {
             const colorClass = piece.color === 'w' ? 'white' : 'black'
