@@ -1,13 +1,9 @@
-import type { Color, PieceSymbol } from 'chess.js'
+import type { PieceSymbol } from 'chess.js'
 import type { MoveHistoryEntry } from '../../game/gameTypes'
+import { getCapturedBy, type CapturedPiece } from './capturedPiecesUtils'
 
 type CapturedPiecesProps = {
   moves: MoveHistoryEntry[]
-}
-
-type CapturedPiece = {
-  color: Color
-  type: PieceSymbol
 }
 
 const pieceNames: Record<PieceSymbol, string> = {
@@ -19,16 +15,7 @@ const pieceNames: Record<PieceSymbol, string> = {
   k: 'king',
 }
 
-function getCapturedBy(moves: MoveHistoryEntry[], capturer: Color): CapturedPiece[] {
-  return moves
-    .filter((move) => move.color === capturer && move.captured)
-    .map((move) => ({
-      color: move.color === 'w' ? 'b' : 'w',
-      type: move.captured as PieceSymbol,
-    }))
-}
-
-function CapturedTray({ pieces }: { pieces: CapturedPiece[] }) {
+export function CapturedTray({ pieces }: { pieces: CapturedPiece[] }) {
   return (
     <div className="captured-tray">
       <div className="captured-tray-title">
@@ -60,13 +47,19 @@ function CapturedTray({ pieces }: { pieces: CapturedPiece[] }) {
   )
 }
 
+export function VsMedallion() {
+  return (
+    <div className="vs-medallion" aria-label="versus">
+      VS
+    </div>
+  )
+}
+
 export function CapturedPieces({ moves }: CapturedPiecesProps) {
   return (
     <section className="captured-stack" aria-label="Captured pieces">
       <CapturedTray pieces={getCapturedBy(moves, 'w')} />
-      <div className="vs-medallion" aria-label="versus">
-        VS
-      </div>
+      <VsMedallion />
       <CapturedTray pieces={getCapturedBy(moves, 'b')} />
     </section>
   )

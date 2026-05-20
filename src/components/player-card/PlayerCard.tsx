@@ -9,10 +9,9 @@ type PlayerCardProps = {
   isActive: boolean
   rating: number
   timer: string
-  statusText: string
 }
 
-export function PlayerCard({ name, side, avatar, isActive, rating, timer, statusText }: PlayerCardProps) {
+export function PlayerCard({ name, side, avatar, isActive, rating, timer }: PlayerCardProps) {
   return (
     <PixelPanel className={`player-card-panel ${isActive ? 'is-active' : ''}`}>
       <div className="player-card-content">
@@ -36,7 +35,6 @@ export function PlayerCard({ name, side, avatar, isActive, rating, timer, status
               {timer}
             </span>
           </div>
-          <p className="player-status">{statusText}</p>
         </div>
       </div>
     </PixelPanel>

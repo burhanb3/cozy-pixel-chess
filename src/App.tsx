@@ -1,5 +1,6 @@
 import { BottomActions } from './components/bottom-actions/BottomActions'
-import { CapturedPieces } from './components/captured-pieces/CapturedPieces'
+import { CapturedTray, VsMedallion } from './components/captured-pieces/CapturedPieces'
+import { getCapturedBy } from './components/captured-pieces/capturedPiecesUtils'
 import { ChessBoard } from './components/chess-board/ChessBoard'
 import { CoachBubble } from './components/coach-bubble/CoachBubble'
 import { GameLayout } from './components/game-layout/GameLayout'
@@ -13,6 +14,8 @@ import { defaultTheme } from './themes/themeRegistry'
 function App() {
   const { game, selectedSquare, invalidSquare, legalMoves, canUndo, handleSquareClick, resetGame, undoLastMove } =
     useOfflineChessGame()
+  const whiteCapturedPieces = getCapturedBy(game.moveHistory, 'w')
+  const blackCapturedPieces = getCapturedBy(game.moveHistory, 'b')
 
   const currentTurnLabel = game.isGameOver
     ? 'Game finished gently. Start again whenever you like.'
@@ -30,19 +33,19 @@ function App() {
             name="TeaLeaf"
             rating={1478}
             side="w"
-            statusText={game.turn === 'w' ? 'Your move' : 'Watching the rain'}
             timer="08:37"
           />
-          <CapturedPieces moves={game.moveHistory} />
+          <CapturedTray pieces={whiteCapturedPieces} />
+          <VsMedallion />
           <PlayerCard
             avatar={placeholderAvatars[1]}
             isActive={game.turn === 'b' && !game.isGameOver}
             name="MossyCat"
             rating={1526}
             side="b"
-            statusText={game.turn === 'b' ? 'Thinking...' : 'Waiting warmly'}
             timer="07:52"
           />
+          <CapturedTray pieces={blackCapturedPieces} />
         </>
       }
       board={
